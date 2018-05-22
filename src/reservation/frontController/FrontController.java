@@ -52,6 +52,10 @@ public class FrontController extends HttpServlet {
 			forward = new ActionForward(false, "userEditView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "userDeleteView.reservation")) {
 			forward = new ActionForward(false, "userDeleteView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "movieManageView.reservation")) {
+			forward = new ActionForward(false, "movieManageView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "userListView.reservation")) {
+			forward = new ActionForward(false, "userListView.jsp");
 		} 
 		
 		else if(target.equals(ServerUtil.relativePath + "boardListView.reservation")) {
