@@ -12,7 +12,7 @@
           </div>
           <p class="lead">사용자 정보를 기입해 회원가입해주세요.</p>
           <hr>
-          <form class="pt-3" style="max-width:720px;">
+          <form action="userJoinAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
             <div class="form-group">
               <label>아이디</label>
               <input type="text" class="form-control" placeholder="아이디를 입력하세요.">

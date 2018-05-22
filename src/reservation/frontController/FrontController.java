@@ -51,7 +51,7 @@ public class FrontController extends HttpServlet {
 			forward = new ActionForward(false, "userEditView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "userDeleteView.reservation")) {
 			forward = new ActionForward(false, "userDeleteView.jsp");
-		}
+		} 
 		
 		else if(target.equals(ServerUtil.relativePath + "boardListView.reservation")) {
 			forward = new ActionForward(false, "boardListView.jsp");
@@ -67,12 +67,15 @@ public class FrontController extends HttpServlet {
 			forward = new ActionForward(false, "movieChartView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "payView.reservation")) {
 			forward = new ActionForward(false, "payView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "reservationView.reservation")) {
+			forward = new ActionForward(false, "reservationView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "qnaView.reservation")) {
 			forward = new ActionForward(false, "qnaView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "seatSelectView.reservation")) {
 			forward = new ActionForward(false, "seatSelectView.jsp");
 		}
 		
+				
 		/* 회원 - 데이터 조회 처리(Forward 처리) */
 		
 		/* 회원 - 삽입/수정/삭제 처리 (Redirect 처리) */

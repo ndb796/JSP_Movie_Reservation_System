@@ -12,6 +12,7 @@
           </div>
           <p class="lead">로그아웃이 완료되었습니다.</p>
           <hr>
+          <form action="userLogoutAction.reservation" method="GET" class="pt-3" style="max-width:720px;">
           <a href="./index.jsp" class="btn btn-primary">메인으로 돌아가기</a>
         </main>
       </div>

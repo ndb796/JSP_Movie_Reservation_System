@@ -9,9 +9,9 @@
       <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">회원 관리</span>
     </a>
     <div class="collapse" id="usermenu">
-      <a href="./userJoinView.reservation" class="list-group-item" data-parent="#sidebar">회원가입</a>
+      <a href="./userConfirmView.reservation" class="list-group-item" data-parent="#sidebar">회원가입</a>
       <a href="./userLoginView.reservation" class="list-group-item" data-parent="#sidebar">로그인</a>
-      <a href="./userFindView.reservation" class="list-group-item" data-parent="#sidebar">ID/PW 찾기</a>
+      <a href="./userFindView.reservation" class="list-group-item" data-parent="#sidebar">비밀번호 찾기</a>
       <a href="./userEditView.reservation" class="list-group-item" data-parent="#sidebar">회원정보수정</a>
       <a href="./userLogoutAction.reservation" class="list-group-item" data-parent="#sidebar">로그아웃</a>
    	  <a href="./userDeleteView.reservation" class="list-group-item" data-parent="#sidebar">회원탈퇴</a>		

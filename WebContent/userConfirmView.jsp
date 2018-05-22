@@ -12,8 +12,8 @@
           </div>
           <p class="lead">실명확인을 해주세요.</p>
           <hr>
-          <form class="pt-3" style="max-width:720px;">
-            <div class="form-group">
+          <form action="userConfirmAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
+          <div class="form-group">
               <label>실명</label>
               <input type="text" class="form-control" placeholder="실명을 입력하세요.">
             </div>
@@ -21,7 +21,7 @@
               <label>주민등록번호</label>
               <input type="text" class="form-control" placeholder="주민번호 13자리를 입력하세요.(- 생략)">
             </div>
-           <a href="./userInfo.jsp" class="btn btn-primary float-right">실명확인</a>
+           <a href="./userJoinView.reservation" class="btn btn-primary float-right">실명확인</a>
           </form>
         </main>
       </div>

@@ -42,7 +42,7 @@
                 <option>5관(4D PLEX) (172/180)</option>
               </select>
             </div>
-            <a href="./select.jsp" class="btn btn-primary float-right">인원/좌석 선택</a>
+            <a href="./seatSelectView.reservation" class="btn btn-primary float-right">인원/좌석 선택</a>
           </form>
         </main>
       </div>

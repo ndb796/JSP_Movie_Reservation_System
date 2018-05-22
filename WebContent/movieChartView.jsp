@@ -28,35 +28,35 @@
                 <td><a href="./boardView.jsp" style="color:#000000;">어벤져스:인피니티 워</a></td>
                 <td style="text-align: center;">149분</td>
                 <td style="text-align: center;">2018-04-25</td>
-                <td onclick="location.href = './reservation.jsp';" class="btn btn-primary float-right">상영관</td>
+                <td onclick="location.href = './reservationView.reservation';" class="btn btn-primary float-right">상영관</td>
               </tr>
               <tr>
                 <td style="text-align: center;">미스터리</td>
                 <td><a href="./boardView.jsp" style="color:#000000;">버닝</a></td>
                 <td style="text-align: center;">148분</td>
                 <td style="text-align: center;">2018-05-17</td>
-                <td onclick="location.href = './reservation.jsp';" class="btn btn-primary float-right">상영관</td>
+                <td onclick="location.href = './reservationView.reservation';" class="btn btn-primary float-right">상영관</td>
               </tr>
               <tr>
                 <td style="text-align: center;">액션/모험</td>
                 <td><a href="./boardView.jsp" style="color:#000000;">데드풀2</a></td>
                 <td style="text-align: center;">117분</td>
                 <td style="text-align: center;">2018-05-16</td>
-                <td onclick="location.href = './reservation.jsp';" class="btn btn-primary float-right">상영관</td>
+                <td onclick="location.href = './reservationView.reservation';" class="btn btn-primary float-right">상영관</td>
               </tr>
               <tr>
                 <td style="text-align: center;">드라마</td>
                 <td><a href="./boardView.jsp" style="color:#000000;">레슬러</a></td>
                 <td style="text-align: center;">110분</td>
                 <td style="text-align: center;">2018-05-09</td>
-                <td onclick="location.href = './reservation.jsp';" class="btn btn-primary float-right">상영관</td>
+                <td onclick="location.href = './reservationView.reservation';" class="btn btn-primary float-right">상영관</td>
               </tr>
               <tr>
                 <td style="text-align: center;">로맨스</td>
                 <td><a href="./boardView.jsp" style="color:#000000;">안녕, 나의 소녀</a></td>
                 <td style="text-align: center;">104분</td>
                 <td style="text-align: center;">2018-05-16</td>
-                <td onclick="location.href = './reservation.jsp';" class="btn btn-primary float-right">상영관</td>
+                <td onclick="location.href = './reservationView.reservation';" class="btn btn-primary float-right">상영관</td>
                 <!-- 상영관 버튼 누르면 reservation으로 갈 수 있는 기능 필요 -->
               </tr>
             </tbody>
