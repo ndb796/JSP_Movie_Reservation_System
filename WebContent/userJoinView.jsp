@@ -38,7 +38,7 @@
               <label>이메일</label>
               <input name="userEmail" type="email" class="form-control" placeholder="이메일을 입력하세요.">
             </div>
-           <a href="./index.jsp" class="btn btn-primary float-right">회원 가입</a>
+           <button type="submit" class="btn btn-primary float-right">회원 가입</button>
           </form>
         </main>
       </div>
