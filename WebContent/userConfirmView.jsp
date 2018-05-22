@@ -15,11 +15,11 @@
           <form action="userConfirmAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
           <div class="form-group">
               <label>실명</label>
-              <input type="text" class="form-control" placeholder="실명을 입력하세요.">
+              <input name="userName" type="text" class="form-control" placeholder="실명을 입력하세요.">
             </div>
             <div class="form-group">
               <label>주민등록번호</label>
-              <input type="text" class="form-control" placeholder="주민번호 13자리를 입력하세요.(- 생략)">
+              <input name="userResidentID" type="text" class="form-control" placeholder="주민번호 13자리를 입력하세요.(- 생략)">
             </div>
            <a href="./userJoinView.reservation" class="btn btn-primary float-right">실명확인</a>
           </form>
