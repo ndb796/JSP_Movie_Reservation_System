@@ -50,14 +50,14 @@
           </div>
           <p class="lead">아이디와 비밀번호를 입력해 로그인합니다.</p>
           <hr>
-          <form class="pt-3" style="max-width:720px;">
+          <form action="userLoginAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
             <div class="form-group">
               <label>아이디</label>
-              <input type="text" class="form-control" placeholder="아이디를 입력하세요.">
+              <input name="userID" type="text" class="form-control" placeholder="아이디를 입력하세요.">
             </div>
             <div class="form-group">
               <label>비밀번호</label>
-              <input type="password" class="form-control" placeholder="비밀번호를 입력하세요.">
+              <input name="userPassword" type="password" class="form-control" placeholder="비밀번호를 입력하세요.">
             </div>
             <button type="submit" class="btn btn-primary">로그인</button>
           </form>
