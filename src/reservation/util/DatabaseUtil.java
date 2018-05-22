@@ -12,7 +12,7 @@ public class DatabaseUtil {
 		try {
 			// 텍스트 파일에는 한 줄씩 데이터베이스 아이디, 비밀번호를 입력하여 관리합니다.
 	        BufferedReader in = new BufferedReader(new FileReader(ServerUtil.authenticationPath + "Database.txt"));
-			String dbURL = "jdbc:mysql://localhost:3306/" + in.readLine();
+			String dbURL = "jdbc:mysql://localhost:3306/" + in.readLine() + "?useSSL=false&useUnicode=true";
 			String dbID = in.readLine();
 			String dbPassword = in.readLine();
 			in.close();

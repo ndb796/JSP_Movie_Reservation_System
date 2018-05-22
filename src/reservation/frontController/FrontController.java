@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import reservation.command.user.UserConfirmCommand;
+import reservation.command.user.UserJoinViewCommand;
 import reservation.command.user.UserLoginCommand;
 import reservation.command.user.UserLogoutCommand;
 import reservation.command.user.UserPasswordFindCommand;
@@ -44,8 +46,6 @@ public class FrontController extends HttpServlet {
 			forward = new ActionForward(false, "userLoginView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "userConfirmView.reservation")) {
 			forward = new ActionForward(false, "userConfirmView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "userJoinView.reservation")) {
-			forward = new ActionForward(false, "userJoinView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "userFindView.reservation")) {
 			forward = new ActionForward(false, "userFindView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "userEditView.reservation")) {
@@ -78,6 +78,10 @@ public class FrontController extends HttpServlet {
 		
 				
 		/* 회원 - 데이터 조회 처리(Forward 처리) */
+		else if(target.equals(ServerUtil.relativePath + "userJoinView.reservation")) {
+			command = new UserJoinViewCommand();
+			forward = command.execute(request, response);
+		}
 		
 		/* 회원 - 삽입/수정/삭제 처리 (Redirect 처리) */
 		else if(target.equals(ServerUtil.relativePath + "userLoginAction.reservation")) {
@@ -88,6 +92,9 @@ public class FrontController extends HttpServlet {
 			forward = command.execute(request, response);
 		} else if(target.equals(ServerUtil.relativePath + "userFindAction.reservation")) {
 			command = new UserPasswordFindCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "userConfirmAction.reservation")) {
+			command = new UserConfirmCommand();
 			forward = command.execute(request, response);
 		}
 		

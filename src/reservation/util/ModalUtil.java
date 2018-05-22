@@ -29,7 +29,6 @@ public class ModalUtil {
 	}
 	
 	public ModalUtil(String modalTitle, String modalBody, String modalColor) {
-		super();
 		this.modalTitle = modalTitle;
 		this.modalBody = modalBody;
 		this.modalColor = modalColor;
