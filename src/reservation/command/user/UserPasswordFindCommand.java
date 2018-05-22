@@ -1,5 +1,7 @@
 package reservation.command.user;
 
+import java.util.Properties;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -41,8 +43,7 @@ public class UserPasswordFindCommand implements Command {
 				String to = emailAddress;
 				String subject = "[JES] 인증 번호를 전송해드립니다.";
 				String content = "<p style='font-size: 14px; font-family: Nanum Gothic;'>회원님의 병원의 인증 번호는 <strong>" +
-								 authenticationNumber + "</strong> 입니다.";
-				
+								 authenticationNumber + "</strong> 입니다.</p>";
 				Properties p = new Properties();
 				p.put("mail.smtp.user", from);
 				p.put("mail.smtp.host", "smtp.googlemail.com");
