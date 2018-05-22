@@ -38,7 +38,7 @@ public class UserLoginCommand implements Command {
 			} else if(result == 1) {
 				session.setAttribute("userID", userID);
 				session.setAttribute("modal", new Modal("성공 메시지", "로그인에 성공했습니다.", Modal.SUCCESS));
-				viewPage = "userMainView.reservation";
+				viewPage = "mainView.reservation";
 			}
 		}
 		return new ActionForward(isRedirect, viewPage);

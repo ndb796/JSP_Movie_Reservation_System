@@ -13,7 +13,13 @@
           <p class="lead">예매 인원과 좌석을 선택해주세요.</p>
           <hr>
           <form class="pt-3" style="max-width:720px;">
-            
+         	<%
+             int i = 0;
+             while(i++ < 100)
+             {
+            	 <button type="submit" class="btn btn-primary">로그인</button>
+             }
+      		 %>
           <a href="./pay.jsp" class="btn btn-primary float-right">결제하기</a>
           </form>
         </main>
