@@ -15,27 +15,28 @@
           <form action="userJoinAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
             <div class="form-group">
               <label>아이디</label>
-              <input type="text" class="form-control" placeholder="아이디를 입력하세요.">
+              ++ 
+              <input name="userID" type="text" class="form-control" placeholder="아이디를 입력하세요.">
             </div>
             <div class="form-group">
               <label>비밀번호</label>
-              <input type="password" class="form-control" placeholder="비밀번호를 입력하세요.">
+              <input name="userPassword" type="password" class="form-control" placeholder="비밀번호를 입력하세요.">
             </div>
             <div class="form-group">
               <label>비밀번호 확인</label>
-              <input type="password" class="form-control" placeholder="비밀번호 확인을 입력하세요.">
+              <input name="userPasswordConfirm" type="password" class="form-control" placeholder="비밀번호 확인을 입력하세요.">
             </div>
             <div class="form-group">
               <label>전화번호</label>
-              <input type="text" class="form-control" placeholder="전화번호를 입력하세요.">
+              <input name="userPhone" type="text" class="form-control" placeholder="전화번호를 입력하세요.">
             </div>
             <div class="form-group">
               <label>주소</label>
-              <input type="text" class="form-control" placeholder="주소를 입력하세요.">
+              <input name="userAddress" type="text" class="form-control" placeholder="주소를 입력하세요.">
             </div>
             <div class="form-group">
               <label>이메일</label>
-              <input type="email" class="form-control" placeholder="이메일을 입력하세요.">
+              <input name="userEmail" type="email" class="form-control" placeholder="이메일을 입력하세요.">
             </div>
            <a href="./index.jsp" class="btn btn-primary float-right">회원 가입</a>
           </form>
