@@ -13,7 +13,7 @@ import reservation.command.user.UserLoginCommand;
 import reservation.util.ServerUtil;
 import reservatoin.command.Command;
 
-@WebServlet("*.jes")
+@WebServlet("*.reservation")
 public class FrontController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -36,6 +36,8 @@ public class FrontController extends HttpServlet {
 		/* 회원 - 단순 View 처리(Forward 처리) */
 		if(target.equals(ServerUtil.relativePath + "userLoginView.reservation")) {
 			forward = new ActionForward(false, "userLoginView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "mainView.reservation")) {
+			forward = new ActionForward(false, "mainView.jsp");
 		}
 		
 		/* 회원 - 삽입/수정/삭제 처리 (Forward 처리) */
