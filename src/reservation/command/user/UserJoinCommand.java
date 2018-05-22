@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import reservation.dao.UserDAO;
+import reservation.dto.UserDTO;
 import reservation.frontController.ActionForward;
 import reservation.util.ModalUtil;
 import reservatoin.command.Command;
@@ -13,32 +14,72 @@ public class UserJoinCommand implements Command {
 
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
 		boolean isRedirect = true;
-		String viewPage = "userJoinView.reservation";
+		String viewPage = "userConfirmView.reservation";
 		HttpSession session = request.getSession();
+		String userName = null;
+		String userResidentID = null;
 		String userID = null;
 		String userPassword = null;
-		if(request.getParameter("userID") != null) {
-			userID = request.getParameter("userID");
+		String userPasswordConfirm = null;
+		String userPhone = null;
+		String userAddress = null;
+		String userEmail = null;
+		int userType = 0;
+		
+		if(session.getAttribute("userNameForJoin") != null) {
+			userName = (String) session.getAttribute("userNameForJoin");
 		}
-		if(request.getParameter("userPassword") != null) {
-			userPassword = request.getParameter("userPassword");
+		if(session.getAttribute("userResidentIDForJoin") != null) {
+			userResidentID = (String) session.getAttribute("userResidentIDForJoin");
+		}
+		if(userName == null || userResidentID == null ||
+		   userName.equals("") || userResidentID.equals("")) {
+			session.setAttribute("modal", new ModalUtil("오류 메시지", "실명 및 주민등록번호 인증을 먼저 해주세요.", ModalUtil.ERROR));
+		}
+		if(request.getAttribute("userID") != null) {
+			userID = (String) request.getAttribute("userID");
+		}
+		if(request.getAttribute("userPassword") != null) {
+			userPassword = (String) request.getAttribute("userPassword");
+		}
+		if(request.getAttribute("userPasswordConfirm") != null) {
+			userPasswordConfirm = (String) request.getAttribute("userPasswordConfirm");
+		}
+		if(request.getAttribute("userPhone") != null) {
+			userPhone = (String) request.getAttribute("userPhone");
+		}
+		if(request.getAttribute("userAddress") != null) {
+			userAddress = (String) request.getAttribute("userAddress");
+		}
+		if(request.getAttribute("userEmail") != null) {
+			userEmail = (String) request.getAttribute("userEmail");
 		}
 		if(userID == null || userPassword == null ||
-		   userID.equals("") || userPassword.equals("")) {
-			session.setAttribute("modal", new ModalUtil("오류 메시지", "모든 내용은 빈 칸일 수 없습니다.", ModalUtil.ERROR));
+		   userPhone == null || userAddress == null ||
+		   userEmail == null || userID.equals("") ||
+		   userPassword.equals("") || userPhone.equals("") ||
+		   userAddress.equals("") || userEmail.equals("")) {
+			session.setAttribute("modal", new ModalUtil("오류 메시지", "모든 내용을 기입해주세요.", ModalUtil.ERROR));
+		} else if(userPassword.equals(userPasswordConfirm)) {
+			session.setAttribute("modal", new ModalUtil("오류 메시지", "비밀번호와 비밀번호 확인이 바르지 않습니다.", ModalUtil.ERROR));
 		} else {
 			UserDAO userDAO = new UserDAO();
-			int result = userDAO.login(userID, userPassword);
-			if (result == 0) {
-				session.setAttribute("modal", new ModalUtil("오류 메시지", "비밀번호가 틀립니다.", ModalUtil.ERROR));
-			} else if(result == -1) {
-				session.setAttribute("modal", new ModalUtil("오류 메시지", "아이디가 없습니다.", ModalUtil.ERROR));
-			} else if(result == -2) {
-				session.setAttribute("modal", new ModalUtil("오류 메시지", "데이터베이스 오류가 발생했습니다.", ModalUtil.ERROR));
-			} else if(result == 1) {
-				session.setAttribute("userID", userID);
-				session.setAttribute("modal", new ModalUtil("성공 메시지", "로그인에 성공했습니다.", ModalUtil.SUCCESS));
-				viewPage = "mainView.reservation";
+			UserDTO user = new UserDTO(
+				userID,
+				userPassword,
+				userResidentID,
+				userName,
+				userPhone,
+				userAddress,
+				userEmail,
+				userType
+			);
+			int result = userDAO.join(user);
+			if(result == 1) {
+				session.setAttribute("modal", new ModalUtil("성공 메시지", "회원가입에 성공했습니다.", ModalUtil.SUCCESS));
+				viewPage = "userLoginView.reservation";
+			} else {
+				session.setAttribute("modal", new ModalUtil("오류 메시지", "회원가입에 실패했습니다.", ModalUtil.ERROR));
 			}
 		}
 		return new ActionForward(isRedirect, viewPage);

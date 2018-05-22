@@ -21,7 +21,7 @@
               <label>주민등록번호</label>
               <input name="userResidentID" type="text" class="form-control" placeholder="주민번호 13자리를 입력하세요.(- 생략)">
             </div>
-           <a href="./userJoinView.reservation" class="btn btn-primary float-right">실명확인</a>
+           <button type="submit" class="btn btn-primary float-right">실명확인</button>
           </form>
         </main>
       </div>

@@ -84,8 +84,7 @@ public class UserDAO {
 					rs.getString(5),
 					rs.getString(6),
 					rs.getString(7),
-					rs.getString(8),
-					rs.getInt(9)
+					rs.getInt(8)
 				);
 			}
 		} catch (Exception e) {
@@ -97,10 +96,38 @@ public class UserDAO {
 		}
 		return null; // 데이터베이스 오류
 	}
+
+	
+	// 회원 가입
+	public int join(UserDTO user) {
+		String SQL = "INSERT INTO RESERVATION_USER VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = DatabaseUtil.getConnection();
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, user.getUserID());
+			pstmt.setString(2, user.getUserPassword());
+			pstmt.setString(3, user.getUserResidentID());
+			pstmt.setString(4, user.getUserName());
+			pstmt.setString(5, user.getUserPhone());
+			pstmt.setString(6, user.getUserEmail());
+			pstmt.setInt(7, user.getUserType());
+			return pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {if(conn != null) conn.close();} catch (Exception e) {e.printStackTrace();}
+			try {if(pstmt != null) pstmt.close();} catch (Exception e) {e.printStackTrace();}
+			try {if(rs != null) rs.close();} catch (Exception e) {e.printStackTrace();}
+		}
+		return -1; // 데이터베이스 오류
+	}
 	
 	// 회원 정보 수정
 	public int edit(UserDTO user) {
-		String SQL = "UPDATE RESERVATION_USER SET userID = ?, userPassword = ?, userResidentID = ?, userName = ?, userPhone = ?, userAddress = ?, userEmail = ?, userGender = ? WHERE userID = ?";
+		String SQL = "UPDATE RESERVATION_USER SET userID = ?, userPassword = ?, userResidentID = ?, userName = ?, userPhone = ?, userAddress = ?, userEmail = ? WHERE userID = ?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -113,8 +140,7 @@ public class UserDAO {
 			pstmt.setString(4, user.getUserPhone());
 			pstmt.setString(5, user.getUserAddress());
 			pstmt.setString(6, user.getUserEmail());
-			pstmt.setString(7, user.getUserGender());
-			pstmt.setString(8, user.getUserID());
+			pstmt.setString(7, user.getUserID());
 			return pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
