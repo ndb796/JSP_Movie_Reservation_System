@@ -8,56 +8,55 @@
         <nav class="col-md-3 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar">
           <div class="list-group border-0 card text-center text-md-left">
             <a href="./index.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">¸ÞÀÎ</span>
+              <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">ë©”ì¸</span>
             </a>
             <a href="#usermenu" class="list-group-item d-inline-block collapsed"
             data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
-              <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">È¸¿ø °ü¸®</span>
+              <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">íšŒì› ê´€ë¦¬</span>
             </a>
             <div class="collapse" id="usermenu">
-              <a href="./userJoin.html" class="list-group-item" data-parent="#sidebar">È¸¿ø°¡ÀÔ</a>
-              <a href="./userLogin.html" class="list-group-item" data-parent="#sidebar">·Î±×ÀÎ</a>
-              <a href="./userEdit.html" class="list-group-item" data-parent="#sidebar">È¸¿øÁ¤º¸¼öÁ¤</a>
-              <a href="./userFind.html" class="list-group-item" data-parent="#sidebar">ID/PW Ã£±â</a>
-              <a href="./userLogout.html" class="list-group-item" data-parent="#sidebar">·Î±×¾Æ¿ô</a>
+              <a href="./userJoin.html" class="list-group-item" data-parent="#sidebar">íšŒì›ê°€ìž…</a>
+              <a href="./userLogin.html" class="list-group-item" data-parent="#sidebar">ë¡œê·¸ì¸</a>
+              <a href="./userEdit.html" class="list-group-item" data-parent="#sidebar">íšŒì›ì •ë³´ìˆ˜ì •</a>
+              <a href="./userFind.html" class="list-group-item" data-parent="#sidebar">ID/PW ì°¾ê¸°</a>
+              <a href="./userLogout.html" class="list-group-item" data-parent="#sidebar">ë¡œê·¸ì•„ì›ƒ</a>
             </div>
             <a href="./board.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">ÀÚÀ¯°Ô½ÃÆÇ</span>
+              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">ìžìœ ê²Œì‹œíŒ</span>
             </a>
             <a href="./qna.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
               <img style="width: 20px;" src="./img/qna.svg"><span class="d-none d-md-inline">Q & A</span>
             </a>
             <a href="./schedule.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">¿µÈ­ »ó¿µ½Ã°£</span>
+              <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">ì˜í™” ìƒì˜ì‹œê°„</span>
             </a>
             <a href="#search" class="list-group-item d-inline-block collapsed"
             data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
-              <img style="width: 20px;" src="./img/search.svg"><span class="d-none d-md-inline">°Ë»ö</span>
+              <img style="width: 20px;" src="./img/search.svg"><span class="d-none d-md-inline">ê²€ìƒ‰</span>
             </a>
             <a href="./exit.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">È¸¿øÅ»Åð</span>
+              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">íšŒì›íƒˆí‡´</span>
             </a>
             <div class="collapse" id="search">
               <div class="input-group p-2" style="background-color:#1c1c1c;">
-                <input type="text" class="form-control" placeholder="³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä.">
+                <input type="text" class="form-control" placeholder="ë‚´ìš©ì„ ìž…ë ¥í•˜ì„¸ìš”.">
               </div>
             </div>
           </div>
         </nav>
         <main id="main" class="col-md-9 float-left col pl-md-5 pt-3 main">
           <div class="page-header mt-3">
-            <h2>ÀÎ¿ø/ÁÂ¼® ¼±ÅÃ</h2>
+            <h2>ì¸ì›/ì¢Œì„ ì„ íƒ</h2>
           </div>
-          <p class="lead">¿¹¸Å ÀÎ¿ø°ú ÁÂ¼®À» ¼±ÅÃÇØÁÖ¼¼¿ä.</p>
+          <p class="lead">ì˜ˆë§¤ ì¸ì›ê³¼ ì¢Œì„ì„ ì„ íƒí•´ì£¼ì„¸ìš”.</p>
           <hr>
-          
           <form class="pt-3" style="max-width:720px;">
-          <a href="./pay.html" class="btn btn-primary float-right">°áÁ¦ÇÏ±â</a>
+            
+          <a href="./pay.html" class="btn btn-primary float-right">ê²°ì œí•˜ê¸°</a>
           </form>
         </main>
       </div>
     </div>
-    <%@ include file="./fragment/footer.jspf" %>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
