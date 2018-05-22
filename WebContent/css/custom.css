@@ -7,7 +7,7 @@ body {
   font-family: 'Jeju Gothic';
 }
 
-/* �떎吏덉쟻�씤 媛� �궡鍮꾧쾶�씠�뀡 硫붾돱�뱾�쓽 �깋�긽 �벑�쓣 �젙�쓽 */
+/* 실질적인 각 내비게이션 메뉴들의 색상 등을 정의 */
 #sidebar .list-group-item {
   background-color: #333333;
   color= #acacac;
@@ -18,23 +18,23 @@ body {
   white-space: nowrap;
 }
 
-/* �궡鍮꾧쾶�씠�뀡 �븘�옒 �걹源뚯� �굹�뿴 */
+/* 내비게이션 아래 끝까지 나열 */
 #sidebar .list-group {
   background-color: #333333;
   min-height: 100vh;
 }
 
-/* 硫붾돱瑜� �꽑�깮�뻽�쓣 �븣 遺�紐� �슂�냼�쓽 �깋�긽�쓣 蹂�寃쏀빐 以� */
+/* 메뉴를 선택했을 때 부모 요소의 색상을 변경해 줌 */
 #sidebar .list-group .list-group-item[aria-expanded="true"] {
   background-color: #1c1c1c;
 }
 
-/* 硫붾돱瑜� �꽑�깮�뻽�쓣 �븣 �옄�떇 �슂�냼�쓽 �깋�긽�쓣 蹂�寃쏀빐 以� */
+/* 메뉴를 선택했을 때 자식 요소의 색상을 변경해 줌 */
 #sidebar .list-group .list-group-item:not(.collapsed) {
   background-color: #1c1c1c;
 }
 
-/* 遺�媛� �꽕�젙 */
+/* 부가 설정 */
 
 #sidebar {
   overflow: hidden;
@@ -42,7 +42,7 @@ body {
 }
 
 @media (max-width:768px){
-  /* �옉�� �솕硫댁뿉�꽌�뒗 �쇊履� �궡鍮꾧쾶�씠�뀡 �꼫鍮꾨�� �젙�빐吏� �겕湲� �꽕�젙 */
+  /* 작은 화면에서는 왼쪽 내비게이션 너비를 정해진 크기 설정 */
   #sidebar {
     min-width: 35px;
     max-width: 40px;
@@ -53,7 +53,7 @@ body {
     position: fixed;
   }
 
-  /* �옉�� �솕硫댁뿉�꽌 �꽌釉� 硫붾돱瑜� �뿴�뿀�쓣 �븣 湲��옄媛� 蹂댁씠�룄濡� �븿 */
+  /* 작은 화면에서 서브 메뉴를 열었을 때 글자가 보이도록 함 */
   #sidebar, #sidebar .list-group {
     min-width: 35px;
     overflow: visible;
@@ -64,7 +64,7 @@ body {
     width : 190px;
     top : 0;
   }
-  /* �옉�븘議뚯쓣 �븣 �븘�씠肄섏쓣 媛��슫�뜲濡� �젙�젹�빐 以� */
+  /* 작아졌을 때 아이콘을 가운데로 정렬해 줌 */
   #sidebar .list-group > .list-group-item {
     text-align: center;
     padding: .75rem .5rem;
@@ -99,4 +99,3 @@ body {
   height:320px;
   overflow-y: scroll;
 }
-
