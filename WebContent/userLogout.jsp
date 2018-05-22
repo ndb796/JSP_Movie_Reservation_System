@@ -8,49 +8,49 @@
         <nav class="col-md-3 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar">
           <div class="list-group border-0 card text-center text-md-left">
             <a href="./index.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">¸ÞÀÎ</span>
+              <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">ï¿½ï¿½ï¿½ï¿½</span>
             </a>
             <a href="#usermenu" class="list-group-item d-inline-block collapsed"
             data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
-              <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">È¸¿ø °ü¸®</span>
+              <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</span>
             </a>
             <div class="collapse" id="usermenu">
-              <a href="./userJoin.jsp" class="list-group-item" data-parent="#sidebar">È¸¿ø°¡ÀÔ</a>
-              <a href="./userLogin.jsp" class="list-group-item" data-parent="#sidebar">·Î±×ÀÎ</a>
-              <a href="./userEdit.jsp" class="list-group-item" data-parent="#sidebar">È¸¿øÁ¤º¸¼öÁ¤</a>
-              <a href="./userFind.jsp" class="list-group-item" data-parent="#sidebar">ID/PW Ã£±â</a>
-              <a href="./userLogout.jsp" class="list-group-item" data-parent="#sidebar">·Î±×¾Æ¿ô</a>
+              <a href="./userJoin.jsp" class="list-group-item" data-parent="#sidebar">È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a>
+              <a href="./userLogin.jsp" class="list-group-item" data-parent="#sidebar">ï¿½Î±ï¿½ï¿½ï¿½</a>
+              <a href="./userEdit.jsp" class="list-group-item" data-parent="#sidebar">È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a>
+              <a href="./userFind.jsp" class="list-group-item" data-parent="#sidebar">ID/PW Ã£ï¿½ï¿½</a>
+              <a href="./userLogout.jsp" class="list-group-item" data-parent="#sidebar">ï¿½Î±×¾Æ¿ï¿½</a>
             </div>
             <a href="./board.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">ÀÚÀ¯°Ô½ÃÆÇ</span>
+              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½</span>
             </a>
             <a href="./qna.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
               <img style="width: 20px;" src="./img/qna.svg"><span class="d-none d-md-inline">Q & A</span>
             </a>
             <a href="./schedule.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">¿µÈ­ »ó¿µ½Ã°£</span>
+              <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">ï¿½ï¿½È­ ï¿½ó¿µ½Ã°ï¿½</span>
             </a>
             <a href="#search" class="list-group-item d-inline-block collapsed"
             data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
-              <img style="width: 20px;" src="./img/search.svg"><span class="d-none d-md-inline">°Ë»ö</span>
+              <img style="width: 20px;" src="./img/search.svg"><span class="d-none d-md-inline">ï¿½Ë»ï¿½</span>
             </a>
             <a href="./exit.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">È¸¿øÅ»Åð</span>
+              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">È¸ï¿½ï¿½Å»ï¿½ï¿½</span>
             </a>
             <div class="collapse" id="search">
               <div class="input-group p-2" style="background-color:#1c1c1c;">
-                <input type="text" class="form-control" placeholder="³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä.">
+                <input type="text" class="form-control" placeholder="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.">
               </div>
             </div>
           </div>
         </nav>
         <main id="main" class="col-md-9 float-left col pl-md-5 pt-3 main">
           <div class="page-header mt-3">
-            <h2>·Î±×¾Æ¿ô</h2>
+            <h2>ï¿½Î±×¾Æ¿ï¿½</h2>
           </div>
-          <p class="lead">·Î±×¾Æ¿ôÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.</p>
+          <p class="lead">ï¿½Î±×¾Æ¿ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.</p>
           <hr>
-          <a href="./index.jsp" class="btn btn-primary">¸ÞÀÎÀ¸·Î µ¹¾Æ°¡±â</a>
+          <a href="./index.jsp" class="btn btn-primary">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ°ï¿½ï¿½ï¿½</a>
         </main>
       </div>
     </div>
