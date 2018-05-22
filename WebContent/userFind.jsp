@@ -65,6 +65,7 @@
         </main>
       </div>
     </div>
+    <%@ include file="./fragment/footer.jspf" %>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
