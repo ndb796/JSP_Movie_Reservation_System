@@ -1,8 +1,8 @@
 [ 회원 로그인 ]
 
-Action: userLoginAction.jes
+Action: userLoginAction.reservation
 Method: POST
-Parameter: userID, userPassword
+Parameter: 아이디(userID), 비밀번호(userPassword)
 
 [ 회원 회원가입 ]
 

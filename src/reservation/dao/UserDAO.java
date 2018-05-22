@@ -37,4 +37,29 @@ public class UserDAO {
 		return -2; // 데이터베이스 오류
 	}
 	
+	public int userIDCheck(String userID) {
+		String SQL = "SELECT userID FROM RESERVATION_USER WHERE userID = ?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = DatabaseUtil.getConnection();
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, userID);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				return 0; // 존재하는 아이디
+			}
+			return 1; // 생성 가능한 아이디
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {if(conn != null) conn.close();} catch (Exception e) {e.printStackTrace();}
+			try {if(pstmt != null) pstmt.close();} catch (Exception e) {e.printStackTrace();}
+			try {if(rs != null) rs.close();} catch (Exception e) {e.printStackTrace();}
+		}
+		return -1; // 데이터베이스 오류
+	}
+		
+	
 }
