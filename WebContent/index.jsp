@@ -28,7 +28,7 @@
               <img style="width: 20px;" src="./img/qna.svg"><span class="d-none d-md-inline">Q & A</span>
             </a>
             <a href="./schedule.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/movie.svg"><span class="d-none d-md-inline">영화 상영시간</span>
+              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">영화 상영시간</span>
             </a>
             <a href="#search" class="list-group-item d-inline-block collapsed"
             data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">

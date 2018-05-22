@@ -75,7 +75,7 @@
               <label>이메일</label>
               <input type="email" class="form-control" placeholder="이메일을 입력하세요.">
             </div>
-           <button type="submit" class="btn btn-primary">회원가입</button>
+           <a href="./index.jsp" class="btn btn-primary float-right">회원 가입</a>
           </form>
         </main>
       </div>
