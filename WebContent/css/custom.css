@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/earlyaccess/jejugothic.css);
+h1, h2, h3, h4 {
+  font-family: 'Jeju Gothic';
+}
+
+body {
+  font-family: 'Jeju Gothic';
+}
+
+/* �떎吏덉쟻�씤 媛� �궡鍮꾧쾶�씠�뀡 硫붾돱�뱾�쓽 �깋�긽 �벑�쓣 �젙�쓽 */
+#sidebar .list-group-item {
+  background-color: #333333;
+  color= #acacac;
+  border-color: #1c1c1c;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  white-space: nowrap;
+}
+
+/* �궡鍮꾧쾶�씠�뀡 �븘�옒 �걹源뚯� �굹�뿴 */
+#sidebar .list-group {
+  background-color: #333333;
+  min-height: 100vh;
+}
+
+/* 硫붾돱瑜� �꽑�깮�뻽�쓣 �븣 遺�紐� �슂�냼�쓽 �깋�긽�쓣 蹂�寃쏀빐 以� */
+#sidebar .list-group .list-group-item[aria-expanded="true"] {
+  background-color: #1c1c1c;
+}
+
+/* 硫붾돱瑜� �꽑�깮�뻽�쓣 �븣 �옄�떇 �슂�냼�쓽 �깋�긽�쓣 蹂�寃쏀빐 以� */
+#sidebar .list-group .list-group-item:not(.collapsed) {
+  background-color: #1c1c1c;
+}
+
+/* 遺�媛� �꽕�젙 */
+
+#sidebar {
+  overflow: hidden;
+  z-index: 2;
+}
+
+@media (max-width:768px){
+  /* �옉�� �솕硫댁뿉�꽌�뒗 �쇊履� �궡鍮꾧쾶�씠�뀡 �꼫鍮꾨�� �젙�빐吏� �겕湲� �꽕�젙 */
+  #sidebar {
+    min-width: 35px;
+    max-width: 40px;
+    overflow-y: auto;
+    overflow-x: visible;
+    transition: all 0.25s ease;
+    transform: translateX(0px);
+    position: fixed;
+  }
+
+  /* �옉�� �솕硫댁뿉�꽌 �꽌釉� 硫붾돱瑜� �뿴�뿀�쓣 �븣 湲��옄媛� 蹂댁씠�룄濡� �븿 */
+  #sidebar, #sidebar .list-group {
+    min-width: 35px;
+    overflow: visible;
+  }
+  #sidebar .list-group .collapse.show, #sidebar .list-group .collapsing {
+    position: relative;
+    z-index : 1;
+    width : 190px;
+    top : 0;
+  }
+  /* �옉�븘議뚯쓣 �븣 �븘�씠肄섏쓣 媛��슫�뜲濡� �젙�젹�빐 以� */
+  #sidebar .list-group > .list-group-item {
+    text-align: center;
+    padding: .75rem .5rem;
+  }
+  #sidebar::-webkit-scrollbar {width:0px;}
+}
+
+#main {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+@media (max-width:768px) {
+  #main {
+    margin-left: 38px;
+  }
+}
+
+@media (max-width:560px) {
+  .mobile {
+    display:none;
+  }
+}
+
+.boardTitle {
+  background-color: #efefef;
+  padding:6px;
+}
+.boardContent {
+  background-color: #efefef;
+  padding:6px;
+  height:320px;
+  overflow-y: scroll;
+}
+
