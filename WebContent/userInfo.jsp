@@ -17,8 +17,8 @@
             <div class="collapse" id="usermenu">
               <a href="./userJoin.jsp" class="list-group-item" data-parent="#sidebar">회원가입</a>
               <a href="./userLogin.jsp" class="list-group-item" data-parent="#sidebar">로그인</a>
-              <a href="./userEdit.jsp" class="list-group-item" data-parent="#sidebar">회원정보수정</a>
               <a href="./userFind.jsp" class="list-group-item" data-parent="#sidebar">ID/PW 찾기</a>
+              <a href="./userEdit.jsp" class="list-group-item" data-parent="#sidebar">회원정보수정</a>
               <a href="./userLogout.jsp" class="list-group-item" data-parent="#sidebar">로그아웃</a>
             </div>
             <a href="./board.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
@@ -46,9 +46,9 @@
         </nav>
         <main id="main" class="col-md-9 float-left col pl-md-5 pt-3 main">
           <div class="page-header mt-3">
-            <h2>로그인</h2>
+            <h2>회원 가입</h2>
           </div>
-          <p class="lead">아이디와 비밀번호를 입력해 로그인합니다.</p>
+          <p class="lead">사용자 정보를 기입해 회원가입해주세요.</p>
           <hr>
           <form class="pt-3" style="max-width:720px;">
             <div class="form-group">
@@ -59,7 +59,23 @@
               <label>비밀번호</label>
               <input type="password" class="form-control" placeholder="비밀번호를 입력하세요.">
             </div>
-            <button type="submit" class="btn btn-primary">로그인</button>
+            <div class="form-group">
+              <label>비밀번호 확인</label>
+              <input type="password" class="form-control" placeholder="비밀번호 확인을 입력하세요.">
+            </div>
+            <div class="form-group">
+              <label>전화번호</label>
+              <input type="text" class="form-control" placeholder="전화번호를 입력하세요.">
+            </div>
+            <div class="form-group">
+              <label>주소</label>
+              <input type="text" class="form-control" placeholder="주소를 입력하세요.">
+            </div>
+            <div class="form-group">
+              <label>이메일</label>
+              <input type="email" class="form-control" placeholder="이메일을 입력하세요.">
+            </div>
+           <button type="submit" class="btn btn-primary">회원가입</button>
           </form>
         </main>
       </div>

@@ -7,7 +7,7 @@
       <div class="row d-flex d-md-block flex-nowrap wrapper">
         <nav class="col-md-3 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar">
           <div class="list-group border-0 card text-center text-md-left">
-            <a href="./index.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+            <a href="./index.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
               <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">메인</span>
             </a>
             <a href="#usermenu" class="list-group-item d-inline-block collapsed"
@@ -15,26 +15,26 @@
               <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">회원 관리</span>
             </a>
             <div class="collapse" id="usermenu">
-              <a href="./userJoin.html" class="list-group-item" data-parent="#sidebar">회원가입</a>
-              <a href="./userLogin.html" class="list-group-item" data-parent="#sidebar">로그인</a>
-              <a href="./userEdit.html" class="list-group-item" data-parent="#sidebar">회원정보수정</a>
-              <a href="./userFind.html" class="list-group-item" data-parent="#sidebar">ID/PW 찾기</a>
-              <a href="./userLogout.html" class="list-group-item" data-parent="#sidebar">로그아웃</a>
+              <a href="./userJoin.jsp" class="list-group-item" data-parent="#sidebar">회원가입</a>
+              <a href="./userLogin.jsp" class="list-group-item" data-parent="#sidebar">로그인</a>
+              <a href="./userEdit.jsp" class="list-group-item" data-parent="#sidebar">회원정보수정</a>
+              <a href="./userFind.jsp" class="list-group-item" data-parent="#sidebar">ID/PW 찾기</a>
+              <a href="./userLogout.jsp" class="list-group-item" data-parent="#sidebar">로그아웃</a>
             </div>
-            <a href="./board.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+            <a href="./board.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
               <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">자유게시판</span>
             </a>
-            <a href="./qna.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+            <a href="./qna.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
               <img style="width: 20px;" src="./img/qna.svg"><span class="d-none d-md-inline">Q & A</span>
             </a>
-            <a href="./schedule.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+            <a href="./schedule.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
               <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">영화 상영시간</span>
             </a>
             <a href="#search" class="list-group-item d-inline-block collapsed"
             data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
               <img style="width: 20px;" src="./img/search.svg"><span class="d-none d-md-inline">검색</span>
             </a>
-            <a href="./exit.html" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
+            <a href="./exit.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
               <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">회원탈퇴</span>
             </a>
             <div class="collapse" id="search">
@@ -50,7 +50,7 @@
           </div>
           <p class="lead">로그아웃이 완료되었습니다.</p>
           <hr>
-          <a href="./index.html" class="btn btn-primary">메인으로 돌아가기</a>
+          <a href="./index.jsp" class="btn btn-primary">메인으로 돌아가기</a>
         </main>
       </div>
     </div>
