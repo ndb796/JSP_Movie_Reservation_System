@@ -15,6 +15,7 @@
           <form action="userJoinAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
             <div class="form-group">
               <label>아이디</label>
+              ++ 
               <input name="userID" type="text" class="form-control" placeholder="아이디를 입력하세요.">
             </div>
             <div class="form-group">
