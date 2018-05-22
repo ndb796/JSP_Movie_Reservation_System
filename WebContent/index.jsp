@@ -1,59 +1,54 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html>
-  <head>
-    <title>ì˜í™” ì˜ˆë§¤ ì‚¬ì´íŠ¸</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/custom.css">
-  </head>
+  <%@ include file="./fragment/header.jspf" %>
   <body>
     <div class="container-fluid">
       <div class="row d-flex d-md-block flex-nowrap wrapper">
         <nav class="col-md-3 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar">
           <div class="list-group border-0 card text-center text-md-left">
             <a href="./index.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">ë©”ì¸</span>
+              <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">¸ÞÀÎ</span>
             </a>
             <a href="#usermenu" class="list-group-item d-inline-block collapsed"
             data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
-              <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">íšŒì› ê´€ë¦¬</span>
+              <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">È¸¿ø °ü¸®</span>
             </a>
             <div class="collapse" id="usermenu">
-              <a href="./userJoin.jsp" class="list-group-item" data-parent="#sidebar">íšŒì›ê°€ìž…</a>
-              <a href="./userLogin.jsp" class="list-group-item" data-parent="#sidebar">ë¡œê·¸ì¸</a>
-              <a href="./userFind.jsp" class="list-group-item" data-parent="#sidebar">ID/PW ì°¾ê¸°</a>
-              <a href="./userEdit.jsp" class="list-group-item" data-parent="#sidebar">íšŒì›ì •ë³´ìˆ˜ì •</a>
-              <a href="./userLogout.jsp" class="list-group-item" data-parent="#sidebar">ë¡œê·¸ì•„ì›ƒ</a>
+              <a href="./userJoin.jsp" class="list-group-item" data-parent="#sidebar">È¸¿ø°¡ÀÔ</a>
+              <a href="./userLogin.jsp" class="list-group-item" data-parent="#sidebar">·Î±×ÀÎ</a>
+              <a href="./userFind.jsp" class="list-group-item" data-parent="#sidebar">ID/PW Ã£±â</a>
+              <a href="./userEdit.jsp" class="list-group-item" data-parent="#sidebar">È¸¿øÁ¤º¸¼öÁ¤</a>
+              <a href="./userLogout.jsp" class="list-group-item" data-parent="#sidebar">·Î±×¾Æ¿ô</a>
             </div>n
             <a href="./board.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">ìžìœ ê²Œì‹œíŒ</span>
+              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">ÀÚÀ¯°Ô½ÃÆÇ</span>
             </a>
             <a href="./qna.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
               <img style="width: 20px;" src="./img/qna.svg"><span class="d-none d-md-inline">Q & A</span>
             </a>
             <a href="./schedule.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">ì˜í™” ìƒì˜ì‹œê°„</span>
+              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">¿µÈ­ »ó¿µ½Ã°£</span>
             </a>
             <a href="#search" class="list-group-item d-inline-block collapsed"
             data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
-              <img style="width: 20px;" src="./img/search.svg"><span class="d-none d-md-inline">ê²€ìƒ‰</span>
+              <img style="width: 20px;" src="./img/search.svg"><span class="d-none d-md-inline">°Ë»ö</span>
             </a>
             <a href="./exit.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
-              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">íšŒì›íƒˆí‡´</span>
+              <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">È¸¿øÅ»Åð</span>
             </a>
             <div class="collapse" id="search">
               <div class="input-group p-2" style="background-color:#1c1c1c;">
-                <input type="text" class="form-control" placeholder="ë‚´ìš©ì„ ìž…ë ¥í•˜ì„¸ìš”.">
+                <input type="text" class="form-control" placeholder="³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä.">
               </div>
             </div>
           </div>
         </nav>
         <main id="main" class="col-md-9 float-left col pl-md-5 pt-3 main">
           <div class="page-header mt-3">
-            <h2>ì˜í™” ì˜ˆë§¤ ì‚¬ì´íŠ¸</h2>
+            <h2>¿µÈ­ ¿¹¸Å »çÀÌÆ®</h2>
           </div>
-          <p class="lead">ì´ê³³ì€ í˜„ìž¬ ìƒì˜ì¤‘ì¸ ì˜í™” í‹°ì¼“ì„ ì˜ˆë§¤í•  ìˆ˜ ìžˆëŠ” ì‚¬ì´íŠ¸ìž…ë‹ˆë‹¤.</p>
+          <p class="lead">ÀÌ°÷Àº ÇöÀç »ó¿µÁßÀÎ ¿µÈ­ Æ¼ÄÏÀ» ¿¹¸ÅÇÒ ¼ö ÀÖ´Â »çÀÌÆ®ÀÔ´Ï´Ù.</p>
           <hr>
           <div id="carousel" class="carousel slide" style="max-width:1080px;" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -63,57 +58,57 @@
             </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="./img/ì¸í”¼ë‹ˆí‹° ì›Œ.jpeg" alt="ì²« ë²ˆì§¸ ì´ë¯¸ì§€">
+              <img class="d-block w-100" src="./img/ÀÎÇÇ´ÏÆ¼ ¿ö.jpeg" alt="Ã¹ ¹øÂ° ÀÌ¹ÌÁö">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="./img/ë²„ë‹.jpeg" alt="ë‘ ë²ˆì§¸ ì´ë¯¸ì§€">
+              <img class="d-block w-100" src="./img/¹ö´×.jpeg" alt="µÎ ¹øÂ° ÀÌ¹ÌÁö">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="./img/ë°ë“œí’€2.jpeg" alt="ì„¸ ë²ˆì§¸ ì´ë¯¸ì§€">
+              <img class="d-block w-100" src="./img/µ¥µåÇ®2.jpeg" alt="¼¼ ¹øÂ° ÀÌ¹ÌÁö">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carousel" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">ì´ì „ ì‚¬ì§„</span>
+            <span class="sr-only">ÀÌÀü »çÁø</span>
           </a>
           <a class="carousel-control-next" href="#carousel" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">ë‹¤ìŒ ì‚¬ì§„</span>
+            <span class="sr-only">´ÙÀ½ »çÁø</span>
           </a>
           </div>
-          <p class="lead mt-4 mb-3 pt-4 pb-3">ê°œë´‰ìž‘ ì˜ˆê³ íŽ¸</p>
+          <p class="lead mt-4 mb-3 pt-4 pb-3">°³ºÀÀÛ ¿¹°íÆí</p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/xUDhdCsLkjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          <p class="lead mt-4 mb-3 pt-4 pb-3">ê°œë´‰ ì˜ˆì •ìž‘ ì˜ˆê³ íŽ¸</p>
+          <p class="lead mt-4 mb-3 pt-4 pb-3">°³ºÀ ¿¹Á¤ÀÛ ¿¹°íÆí</p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/MoMd7ae98hk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           <section class="mt-4 mb-3 pt-4 pb-3" style="max-width:1080px;">
-            <p class="lead">ê³µì§€ì‚¬í•­</p>
+            <p class="lead">°øÁö»çÇ×</p>
             <hr>
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th class="mobile" style="width:55px; text-align:center;">ë²ˆí˜¸</th>
-                  <th style="text-align:center;">ì œëª©</th>
-                  <th class="mobile" style="width:80px; text-align:center;">ìž‘ì„±ìž</th>
-                  <th class="mobile" style="width:120px; text-align:center;">ë‚ ì§œ</th>
+                  <th class="mobile" style="width:55px; text-align:center;">¹øÈ£</th>
+                  <th style="text-align:center;">Á¦¸ñ</th>
+                  <th class="mobile" style="width:80px; text-align:center;">ÀÛ¼ºÀÚ</th>
+                  <th class="mobile" style="width:120px; text-align:center;">³¯Â¥</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td style="text-align: center;">3</td>
-                  <td>ì‹ ê·œ ìš´ì˜ì§„ì„ ëª¨ì§‘í•©ë‹ˆë‹¤.</td>
-                  <td style="text-align: center;">ìš´ì˜ìž</td>
+                  <td>½Å±Ô ¿î¿µÁøÀ» ¸ðÁýÇÕ´Ï´Ù.</td>
+                  <td style="text-align: center;">¿î¿µÀÚ</td>
                   <td style="text-align: center;">2018-01-05</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">2</td>
-                  <td>ì»¤ë®¤ë‹ˆí‹° ì›¹ ì‚¬ì´íŠ¸ì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤.</td>
-                  <td style="text-align: center;">ìš´ì˜ìž</td>
+                  <td>Ä¿¹Â´ÏÆ¼ À¥ »çÀÌÆ®¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù.</td>
+                  <td style="text-align: center;">¿î¿µÀÚ</td>
                   <td style="text-align: center;">2018-01-04</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">1</td>
-                  <td>ì»¤ë®¤ë‹ˆí‹° ì›¹ ì‚¬ì´íŠ¸ê°€ ê°œì„¤ë˜ì—ˆìŠµë‹ˆë‹¤.</td>
-                  <td style="text-align: center;">ìš´ì˜ìž</td>
+                  <td>Ä¿¹Â´ÏÆ¼ À¥ »çÀÌÆ®°¡ °³¼³µÇ¾ú½À´Ï´Ù.</td>
+                  <td style="text-align: center;">¿î¿µÀÚ</td>
                   <td style="text-align: center;">2018-01-03</td>
                 </tr>
               </tbody>
