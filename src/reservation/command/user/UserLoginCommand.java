@@ -6,7 +6,7 @@ import javax.servlet.http.HttpSession;
 
 import reservation.dao.UserDAO;
 import reservation.frontController.ActionForward;
-import reservation.util.Modal;
+import reservation.util.ModalUtil;
 import reservatoin.command.Command;
 
 public class UserLoginCommand implements Command {
@@ -25,19 +25,19 @@ public class UserLoginCommand implements Command {
 		}
 		if(userID == null || userPassword == null ||
 		   userID.equals("") || userPassword.equals("")) {
-			session.setAttribute("modal", new Modal("오류 메시지", "모든 내용은 빈 칸일 수 없습니다.", Modal.ERROR));
+			session.setAttribute("modal", new ModalUtil("오류 메시지", "모든 내용은 빈 칸일 수 없습니다.", ModalUtil.ERROR));
 		} else {
 			UserDAO userDAO = new UserDAO();
 			int result = userDAO.login(userID, userPassword);
 			if (result == 0) {
-				session.setAttribute("modal", new Modal("오류 메시지", "비밀번호가 틀립니다.", Modal.ERROR));
+				session.setAttribute("modal", new ModalUtil("오류 메시지", "비밀번호가 틀립니다.", ModalUtil.ERROR));
 			} else if(result == -1) {
-				session.setAttribute("modal", new Modal("오류 메시지", "아이디가 없습니다.", Modal.ERROR));
+				session.setAttribute("modal", new ModalUtil("오류 메시지", "아이디가 없습니다.", ModalUtil.ERROR));
 			} else if(result == -2) {
-				session.setAttribute("modal", new Modal("오류 메시지", "데이터베이스 오류가 발생했습니다.", Modal.ERROR));
+				session.setAttribute("modal", new ModalUtil("오류 메시지", "데이터베이스 오류가 발생했습니다.", ModalUtil.ERROR));
 			} else if(result == 1) {
 				session.setAttribute("userID", userID);
-				session.setAttribute("modal", new Modal("성공 메시지", "로그인에 성공했습니다.", Modal.SUCCESS));
+				session.setAttribute("modal", new ModalUtil("성공 메시지", "로그인에 성공했습니다.", ModalUtil.SUCCESS));
 				viewPage = "mainView.reservation";
 			}
 		}

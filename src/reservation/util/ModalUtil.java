@@ -1,6 +1,6 @@
 package reservation.util;
 
-public class Modal {
+public class ModalUtil {
 
 	public final static String SUCCESS = "btn btn-primary";
 	public final static String ERROR = "btn btn-danger";
@@ -28,7 +28,7 @@ public class Modal {
 		this.modalColor = modalColor;
 	}
 	
-	public Modal(String modalTitle, String modalBody, String modalColor) {
+	public ModalUtil(String modalTitle, String modalBody, String modalColor) {
 		super();
 		this.modalTitle = modalTitle;
 		this.modalBody = modalBody;

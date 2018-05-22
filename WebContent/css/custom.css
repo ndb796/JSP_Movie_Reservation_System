@@ -98,3 +98,12 @@ body {
   overflow-y: scroll;
   padding: 6px;
 }
+
+/* 모달 팝업창 가운데 수직 정렬 */
+.modal-dialog {
+    -webkit-transform: translate(0,-50%) !important;
+    -o-transform: translate(0,-50%) !important;
+    transform: translate(0,-50%) !important;
+    top: 50%;
+    margin: 0 auto;
+}
