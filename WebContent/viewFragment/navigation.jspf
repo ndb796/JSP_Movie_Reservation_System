@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <nav class="col-md-3 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar">
   <div class="list-group border-0 card text-center text-md-left">
     <a href="./index.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
@@ -9,12 +10,18 @@
       <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">회원 관리</span>
     </a>
     <div class="collapse" id="usermenu">
-      <a href="./userConfirmView.reservation" class="list-group-item" data-parent="#sidebar">회원가입</a>
+<c:choose>
+	<c:when test="${empty sessionScope.userID}">
+	  <a href="./userConfirmView.reservation" class="list-group-item" data-parent="#sidebar">회원가입</a>
       <a href="./userLoginView.reservation" class="list-group-item" data-parent="#sidebar">로그인</a>
       <a href="./userFindView.reservation" class="list-group-item" data-parent="#sidebar">비밀번호 찾기</a>
+	</c:when>
+	<c:otherwise>
       <a href="./userEditView.reservation" class="list-group-item" data-parent="#sidebar">회원정보수정</a>
       <a href="./userLogoutAction.reservation" class="list-group-item" data-parent="#sidebar">로그아웃</a>
    	  <a href="./userDeleteView.reservation" class="list-group-item" data-parent="#sidebar">회원탈퇴</a>		
+	</c:otherwise>
+</c:choose>
     </div>
     <a href="./boardListView.reservation" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
       <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">자유게시판</span>

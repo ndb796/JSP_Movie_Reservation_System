@@ -33,3 +33,4 @@ Parameter: 아이디(userID), 이메일(userEmail)
 
 Action: userLogoutAction.reservation
 Method: GET
+

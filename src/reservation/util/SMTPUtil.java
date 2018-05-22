@@ -6,7 +6,7 @@ import java.io.FileReader;
 import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
 
-public class SMPTUtil extends Authenticator {
+public class SMTPUtil extends Authenticator {
 
 	@Override
 	protected PasswordAuthentication getPasswordAuthentication() {

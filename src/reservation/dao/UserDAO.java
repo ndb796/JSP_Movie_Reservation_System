@@ -63,6 +63,40 @@ public class UserDAO {
 		}
 		return -1; // 데이터베이스 오류
 	}
+
+	// 아이디 정보 확인
+	public UserDTO getUser(String userID) {
+		String SQL = "SELECT * FROM RESERVATION_USER WHERE userID = ?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = DatabaseUtil.getConnection();
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, userID);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				return new UserDTO(
+					rs.getString(1),
+					rs.getString(2),
+					rs.getString(3),
+					rs.getString(4),
+					rs.getString(5),
+					rs.getString(6),
+					rs.getString(7),
+					rs.getString(8),
+					rs.getInt(9)
+				);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {if(conn != null) conn.close();} catch (Exception e) {e.printStackTrace();}
+			try {if(pstmt != null) pstmt.close();} catch (Exception e) {e.printStackTrace();}
+			try {if(rs != null) rs.close();} catch (Exception e) {e.printStackTrace();}
+		}
+		return null; // 데이터베이스 오류
+	}
 	
 	// 회원 정보 수정
 	public int edit(UserDTO user) {
@@ -81,6 +115,28 @@ public class UserDAO {
 			pstmt.setString(6, user.getUserEmail());
 			pstmt.setString(7, user.getUserGender());
 			pstmt.setString(8, user.getUserID());
+			return pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {if(conn != null) conn.close();} catch (Exception e) {e.printStackTrace();}
+			try {if(pstmt != null) pstmt.close();} catch (Exception e) {e.printStackTrace();}
+			try {if(rs != null) rs.close();} catch (Exception e) {e.printStackTrace();}
+		}
+		return -1; // 데이터베이스 오류
+	}
+	
+	// 회원 비밀번호 변경
+	public int changePassword(String userID, String userPassword) {
+		String SQL = "UPDATE RESERVATION_USER SET userPassword = ? WHERE userID = ?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = DatabaseUtil.getConnection();
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, userPassword);
+			pstmt.setString(2, userID);
 			return pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

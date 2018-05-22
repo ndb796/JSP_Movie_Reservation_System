@@ -15,14 +15,14 @@
           <form action="userFindAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
             <div class="form-group">
               <label>아이디</label>
-              <input type="text" class="form-control" placeholder="아이디를 입력하세요.">
+              <input name="userID" type="text" class="form-control" placeholder="아이디를 입력하세요.">
             </div>
             <div class="form-group">
               <label>이메일</label>
-              <input type="email" class="form-control" placeholder="이메일을 입력하세요.">
+              <input name="userEmail" type="email" class="form-control" placeholder="이메일을 입력하세요.">
             </div>
             <button type="submit" class="btn btn-primary">새 비밀번호 발송</button>
-           </form>
+          </form>
         </main>
       </div>
     </div>

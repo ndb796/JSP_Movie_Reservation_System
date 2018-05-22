@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import reservation.command.user.UserLoginCommand;
 import reservation.command.user.UserLogoutCommand;
+import reservation.command.user.UserPasswordFindCommand;
 import reservation.util.ServerUtil;
 import reservatoin.command.Command;
 
@@ -84,6 +85,9 @@ public class FrontController extends HttpServlet {
 			forward = command.execute(request, response);
 		} else if(target.equals(ServerUtil.relativePath + "userLogoutAction.reservation")) {
 			command = new UserLogoutCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "userFindAction.reservation")) {
+			command = new UserPasswordFindCommand();
 			forward = command.execute(request, response);
 		}
 		

@@ -13,7 +13,7 @@
             </div>
             <div class="modal-body">
             	 <div class="text-center">
-            	 	<i style="color: red;" class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+            	 	<i style="color: green;" class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
                  	<p id="successModalBody"></p>
                  </div>
             </div>
@@ -60,7 +60,7 @@
             </div>
             <div class="modal-body">
             	 <div class="text-center">
-            	 	<i style="color: red;" class="fa fa-info-circle fa-4x mb-3 animated rotateIn"></i>
+            	 	<i style="color: blue;" class="fa fa-info-circle fa-4x mb-3 animated rotateIn"></i>
                  	<p id="infoModalBody"></p>
                  </div>
             </div>
