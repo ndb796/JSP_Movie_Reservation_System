@@ -5,7 +5,7 @@
   <body>
     <div class="container-fluid">
       <div class="row d-flex d-md-block flex-nowrap wrapper">
-        <%@ include file="./viweFragment/navigation.jspf" %>
+        <%@ include file="./viewFragment/navigation.jspf" %>
         <main id="main" class="col-md-9 float-left col pl-md-5 pt-3 main">
           <div class="page-header mt-3">
             <h2>Q & A</h2>

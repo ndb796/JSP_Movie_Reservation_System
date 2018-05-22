@@ -4,5 +4,15 @@ Action: userLoginAction.reservation
 Method: POST
 Parameter: 아이디(userID), 비밀번호(userPassword)
 
+[ 회원 주민번호 인증 ]
+
+Action: userConfirmAction.reservation
+Method: POST
+Parameter: 이름(userName), 주민등록번호(userResidentID)
+
 [ 회원 회원가입 ]
 
+Action: userJoinAction.reservation
+Method: POST
+Parameter: 아이디(userID), 비밀번호(userPassword), 비밀번호 확인(userPasswordConfirm), 전화번호(userPhone), 주소(userAddress), 이메일(userEmail)
+(이름, 주민등록번호는 서버 측에서 자동으로 넘겨줍니다.)
