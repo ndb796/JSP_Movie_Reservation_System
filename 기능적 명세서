@@ -16,3 +16,20 @@ Action: userJoinAction.reservation
 Method: POST
 Parameter: 아이디(userID), 비밀번호(userPassword), 비밀번호 확인(userPasswordConfirm), 전화번호(userPhone), 주소(userAddress), 이메일(userEmail)
 (이름, 주민등록번호는 서버 측에서 자동으로 넘겨줍니다.)
+
+[ 회원 탈퇴 ]
+
+Action: userDeleteAction.reservation
+Method: POST
+Parameter: 아이디(userID)
+
+[ 회원 비밀번호 찾기 ]
+
+Action: userFindAction.reservation
+Method: POST
+Parameter: 아이디(userID), 이메일(userEmail)
+
+[ 회원 로그아웃 ] 
+
+Action: userLogoutAction.reservation
+Method: GET

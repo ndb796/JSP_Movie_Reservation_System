@@ -92,7 +92,7 @@ public class UserDAO {
 		return -1; // 데이터베이스 오류
 	}
 	
-	// 회원 정보 수정
+	// 회원 탈퇴
 	public int delete(String userID) {
 		String SQL = "DELETE FROM RESERVATION_USER WHERE userID = ?";
 		Connection conn = null;
