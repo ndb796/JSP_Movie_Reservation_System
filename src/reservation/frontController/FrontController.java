@@ -9,8 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import reservation.command.bbs.BoardListViewCommand;
+import reservation.command.bbs.BoardWriteViewCommand;
 import reservation.command.user.UserConfirmCommand;
 import reservation.command.user.UserDeleteCommand;
+import reservation.command.user.UserEditViewCommand;
 import reservation.command.user.UserJoinCommand;
 import reservation.command.user.UserJoinViewCommand;
 import reservation.command.user.UserLoginCommand;
@@ -52,9 +55,10 @@ public class FrontController extends HttpServlet {
 			forward = new ActionForward(false, "userFindView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "userFindResultView.reservation")) {
 			forward = new ActionForward(false, "userFindResultView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "userEditView.reservation")) {
-			forward = new ActionForward(false, "userEditView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "userDeleteView.reservation")) {
+		}
+		
+		
+		else if(target.equals(ServerUtil.relativePath + "userDeleteView.reservation")) {
 			forward = new ActionForward(false, "userDeleteView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "movieManageView.reservation")) {
 			forward = new ActionForward(false, "movieManageView.jsp");
@@ -62,11 +66,7 @@ public class FrontController extends HttpServlet {
 			forward = new ActionForward(false, "userListView.jsp");
 		} 
 		
-		else if(target.equals(ServerUtil.relativePath + "boardListView.reservation")) {
-			forward = new ActionForward(false, "boardListView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "boardWriteView.reservation")) {
-			forward = new ActionForward(false, "boardWriteView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "boardInfoView.reservation")) {
+		else if(target.equals(ServerUtil.relativePath + "boardInfoView.reservation")) {
 			forward = new ActionForward(false, "boardInfoView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "boardEditView.reservation")) {
 			forward = new ActionForward(false, "boardEditView.jsp");
@@ -89,6 +89,15 @@ public class FrontController extends HttpServlet {
 		else if(target.equals(ServerUtil.relativePath + "userJoinView.reservation")) {
 			command = new UserJoinViewCommand();
 			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "userEditView.reservation")) {
+			command = new UserEditViewCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "boardListView.reservation")) {
+			command = new BoardListViewCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "boardWriteView.reservation")) {
+			command = new BoardWriteViewCommand();
+			forward = new ActionForward(false, "boardWriteView.jsp");
 		}
 		
 		/* 회원 - 삽입/수정/삭제 처리 (Redirect 처리) */
