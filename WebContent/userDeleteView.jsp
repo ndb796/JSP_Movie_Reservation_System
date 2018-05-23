@@ -18,7 +18,7 @@
               <option selected>다른 사이트가 더 편해서</option>
               <option>특별한 사유없음</option>
             </select>
-            <a href="./eixt2.jsp" class="btn btn-primary float-right">회원탈퇴</a>
+            <a href="./userDeleteAction.reservation" class="btn btn-primary float-right">회원탈퇴</a>
           </div>
         </main>
       </div>

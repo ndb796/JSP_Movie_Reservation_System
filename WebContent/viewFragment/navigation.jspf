@@ -23,14 +23,18 @@
 	</c:otherwise>
 </c:choose>
     </div>
-    <a href="#administration" class="list-group-item d-inline-block collapsed"
-    data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
-      <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">관리자 페이지</span>
-    </a>
-    <div class="collapse" id="administration">
-	  <a href="./movieManageView.reservation" class="list-group-item" data-parent="#sidebar">상영 영화 관리</a>
-      <a href="./userListView.reservation" class="list-group-item" data-parent="#sidebar">회원 목록</a>
-    </div>
+<c:choose>
+	<c:when test="${sessionScope.userType eq 0}">
+	    <a href="#administration" class="list-group-item d-inline-block collapsed"
+	    data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
+	      <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">관리자 페이지</span>
+	    </a>
+	    <div class="collapse" id="administration">
+		  <a href="./movieManageView.reservation" class="list-group-item" data-parent="#sidebar">상영 영화 관리</a>
+	      <a href="./userListView.reservation" class="list-group-item" data-parent="#sidebar">회원 목록</a>
+	    </div>
+	</c:when>
+</c:choose>    
     <a href="./boardListView.reservation" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
       <img style="width: 20px;" src="./img/board.svg"><span class="d-none d-md-inline">자유게시판</span>
     </a>

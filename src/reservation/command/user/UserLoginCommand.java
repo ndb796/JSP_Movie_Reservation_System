@@ -37,6 +37,7 @@ public class UserLoginCommand implements Command {
 				session.setAttribute("modal", new ModalUtil("오류 메시지", "데이터베이스 오류가 발생했습니다.", ModalUtil.ERROR));
 			} else if(result == 1) {
 				session.setAttribute("userID", userID);
+				session.setAttribute("userType", userDAO.getUser(userID).getUserType());
 				session.setAttribute("modal", new ModalUtil("성공 메시지", "로그인에 성공했습니다.", ModalUtil.SUCCESS));
 				viewPage = "mainView.reservation";
 			}

@@ -33,3 +33,10 @@ Parameter: 아이디(userID), 이메일(userEmail)
 
 Action: userLogoutAction.reservation
 Method: GET
+
+[ 회원 정보 수정 ]
+
+Action: userEditAction.reservation
+Method: POST
+Parameter: 비밀번호(userPassword), 비밀번호 확인(userPasswordConfirm), 전화번호(userPhone), 주소(userAddress), 이메일(userEmail)
+(아이디 서버 측에서 자동으로 넘겨줍니다.)

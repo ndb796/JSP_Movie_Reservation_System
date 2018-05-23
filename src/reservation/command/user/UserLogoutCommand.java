@@ -15,6 +15,7 @@ public class UserLogoutCommand implements Command {
 		String viewPage = "mainView.reservation";
 		HttpSession session = request.getSession();
 		session.removeAttribute("userID");
+		session.removeAttribute("userType");
 		session.setAttribute("modal", new ModalUtil("성공 메시지", "로그아웃에 성공했습니다.", ModalUtil.SUCCESS));
 		return new ActionForward(isRedirect, viewPage);
 	}
