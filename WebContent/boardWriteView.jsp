@@ -12,14 +12,14 @@
           </div>
           <p class="lead">게시글을 작성합니다.</p>
           <hr>
-          <form class="pt-3" style="max-width:920px;">
+          <form action="boardWriteAction.reservation" method="POST" class="pt-3" style="max-width:920px;">
             <div class="form-group">
               <label>제목</label>
-              <input type="text" class="form-control" placeholder="제목을 입력하세요.">
+              <input name="bbsTitle" type="text" class="form-control" placeholder="제목을 입력하세요.">
             </div>
             <div class="form-group">
               <label>내용</label>
-              <textarea class="form-control" style="height:320px" placeholder="내용을 입력하세요."></textarea>
+              <textarea name="bbsContent" class="form-control" style="height:320px" placeholder="내용을 입력하세요."></textarea>
             </div>
             <button type="submit" class="btn btn-primary">글쓰기</button>
           </form>
