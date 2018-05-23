@@ -27,10 +27,11 @@
 	<c:when test="${sessionScope.userType eq 0}">
 	    <a href="#administration" class="list-group-item d-inline-block collapsed"
 	    data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
-	      <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">관리자 페이지</span>
+	      <img style="width: 20px;" src="./img/home.svg"><span class="d-none d-md-inline">관리자 페이지</span>
 	    </a>
 	    <div class="collapse" id="administration">
 		  <a href="./movieManageView.reservation" class="list-group-item" data-parent="#sidebar">상영 영화 관리</a>
+	      <a href="./noticeView.reservation" class="list-group-item" data-parent="#sidebar">공지사항</a>
 	      <a href="./userListView.reservation" class="list-group-item" data-parent="#sidebar">회원 목록</a>
 	    </div>
 	</c:when>
