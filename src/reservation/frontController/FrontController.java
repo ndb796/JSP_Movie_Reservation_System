@@ -63,19 +63,28 @@ public class FrontController extends HttpServlet {
 			forward = new ActionForward(false, "userFindResultView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "userDeleteView.reservation")) {
 			forward = new ActionForward(false, "userDeleteView.jsp");
-		}
+		} 
+		
 		
 		else if(target.equals(ServerUtil.relativePath + "movieChartView.reservation")) {
 			forward = new ActionForward(false, "movieChartView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "movieEditView.reservation")) {
+			forward = new ActionForward(false, "movieEditView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "movieWriteView.reservation")) {
+			forward = new ActionForward(false, "movieWriteView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "movieDeleteView.reservation")) {
+			forward = new ActionForward(false, "movieDeleteView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "payView.reservation")) {
 			forward = new ActionForward(false, "payView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "payResultView.reservation")) {
+			forward = new ActionForward(false, "payResultView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "reservationView.reservation")) {
 			forward = new ActionForward(false, "reservationView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "qnaView.reservation")) {
 			forward = new ActionForward(false, "qnaView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "seatSelectView.reservation")) {
 			forward = new ActionForward(false, "seatSelectView.jsp");
-		}
+		} 
 		
 				
 		/* 회원 - 데이터 조회 처리(Forward 처리) */
