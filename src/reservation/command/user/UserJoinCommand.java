@@ -36,31 +36,36 @@ public class UserJoinCommand implements Command {
 		   userName.equals("") || userResidentID.equals("")) {
 			session.setAttribute("modal", new ModalUtil("오류 메시지", "실명 및 주민등록번호 인증을 먼저 해주세요.", ModalUtil.ERROR));
 		}
-		if(request.getAttribute("userID") != null) {
-			userID = (String) request.getAttribute("userID");
+		if(request.getParameter("userID") != null) {
+			userID = (String) request.getParameter("userID");
 		}
-		if(request.getAttribute("userPassword") != null) {
-			userPassword = (String) request.getAttribute("userPassword");
+		if(request.getParameter("userPassword") != null) {
+			userPassword = (String) request.getParameter("userPassword");
 		}
-		if(request.getAttribute("userPasswordConfirm") != null) {
-			userPasswordConfirm = (String) request.getAttribute("userPasswordConfirm");
+		if(request.getParameter("userPasswordConfirm") != null) {
+			userPasswordConfirm = (String) request.getParameter("userPasswordConfirm");
 		}
-		if(request.getAttribute("userPhone") != null) {
-			userPhone = (String) request.getAttribute("userPhone");
+		if(request.getParameter("userPhone") != null) {
+			userPhone = (String) request.getParameter("userPhone");
 		}
-		if(request.getAttribute("userAddress") != null) {
-			userAddress = (String) request.getAttribute("userAddress");
+		if(request.getParameter("userAddress") != null) {
+			userAddress = (String) request.getParameter("userAddress");
 		}
-		if(request.getAttribute("userEmail") != null) {
-			userEmail = (String) request.getAttribute("userEmail");
+		if(request.getParameter("userEmail") != null) {
+			userEmail = (String) request.getParameter("userEmail");
 		}
+		System.out.print(userID);
+		System.out.print(userPassword);
+		System.out.print(userPhone);
+		System.out.print(userAddress);
+		System.out.print(userEmail);
 		if(userID == null || userPassword == null ||
 		   userPhone == null || userAddress == null ||
 		   userEmail == null || userID.equals("") ||
 		   userPassword.equals("") || userPhone.equals("") ||
 		   userAddress.equals("") || userEmail.equals("")) {
 			session.setAttribute("modal", new ModalUtil("오류 메시지", "모든 내용을 기입해주세요.", ModalUtil.ERROR));
-		} else if(userPassword.equals(userPasswordConfirm)) {
+		} else if(!userPassword.equals(userPasswordConfirm)) {
 			session.setAttribute("modal", new ModalUtil("오류 메시지", "비밀번호와 비밀번호 확인이 바르지 않습니다.", ModalUtil.ERROR));
 		} else {
 			UserDAO userDAO = new UserDAO();

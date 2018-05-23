@@ -27,7 +27,8 @@ public class UserJoinViewCommand implements Command {
 		   userName.equals("") || userResidentID.equals("")) {
 			session.setAttribute("modal", new ModalUtil("오류 메시지", "실명 및 주민등록번호 인증을 먼저 해주세요.", ModalUtil.ERROR));
 		} else {
-			
+			isRedirect = false;
+			viewPage = "userJoinView.jsp";
 		}
 		return new ActionForward(isRedirect, viewPage);
 	}
