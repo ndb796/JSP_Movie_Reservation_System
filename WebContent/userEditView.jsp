@@ -12,7 +12,7 @@
           </div>
           <p class="lead">사용자 정보를 수정합니다.</p>
           <hr>
-          <form action="userEditAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
+          <form action="./userEditAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
             <div class="form-group">
               <label>비밀번호</label>
               <input name="userPassword" type="password" class="form-control">
@@ -22,15 +22,15 @@
             </div>
             <div class="form-group">
               <label>전화번호</label>
-              <input name="userPhone" type="text" class="form-control">
+              <input name="userPhone" type="text" class="form-control" value="${ user.userPhone }">
             </div>
             <div class="form-group">
               <label>주소</label>
-              <input name="userAddress" type="text" class="form-control">
+              <input name="userAddress" type="text" class="form-control" value="${ user.userAddress }">
             </div>
             <div class="form-group">
               <label>이메일</label>
-              <input name="userEmail" type="email" class="form-control">
+              <input name="userEmail" type="email" class="form-control" value="${ user.userEmail }">
             </div>
  		  <button type="submit" class="btn btn-primary">회원 정보 수정</button>
           </form>

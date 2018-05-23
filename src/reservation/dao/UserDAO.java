@@ -127,21 +127,19 @@ public class UserDAO {
 	}
 	
 	// 회원 정보 수정
-	public int edit(UserDTO user) {
-		String SQL = "UPDATE RESERVATION_USER SET userID = ?, userPassword = ?, userResidentID = ?, userName = ?, userPhone = ?, userAddress = ?, userEmail = ? WHERE userID = ?";
+	public int edit(String userID, String userPassword, String userPhone, String userAddress, String userEmail) {
+		String SQL = "UPDATE RESERVATION_USER SET userPassword = ?, userPhone = ?, userAddress = ?, userEmail = ? WHERE userID = ?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
 			conn = DatabaseUtil.getConnection();
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user.getUserPassword());
-			pstmt.setString(2, user.getUserResidentID());
-			pstmt.setString(3, user.getUserName());
-			pstmt.setString(4, user.getUserPhone());
-			pstmt.setString(5, user.getUserAddress());
-			pstmt.setString(6, user.getUserEmail());
-			pstmt.setString(7, user.getUserID());
+			pstmt.setString(1, userPassword);
+			pstmt.setString(2, userPhone);
+			pstmt.setString(3, userAddress);
+			pstmt.setString(4, userEmail);
+			pstmt.setString(5, userID);
 			return pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

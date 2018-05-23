@@ -4,6 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import reservation.dao.UserDAO;
+import reservation.dto.UserDTO;
 import reservation.frontController.ActionForward;
 import reservation.util.ModalUtil;
 import reservatoin.command.Command;
@@ -11,24 +13,21 @@ import reservatoin.command.Command;
 public class UserEditViewCommand implements Command {
 
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
-		boolean isRedirect = true;
-		String viewPage = "userConfirmView.reservation";
+		boolean isRedirect = false;
+		String viewPage = "userEditView.jsp";
 		HttpSession session = request.getSession();
-		String userName = null;
-		String userResidentID = null;
-		
-		if(session.getAttribute("userNameForJoin") != null) {
-			userName = (String) session.getAttribute("userNameForJoin");
+		String userID = null;
+		if(session.getAttribute("userID") != null) {
+			userID = (String) session.getAttribute("userID");
 		}
-		if(session.getAttribute("userResidentIDForJoin") != null) {
-			userResidentID = (String) session.getAttribute("userResidentIDForJoin");
-		}
-		if(userName == null || userResidentID == null ||
-		   userName.equals("") || userResidentID.equals("")) {
-			session.setAttribute("modal", new ModalUtil("오류 메시지", "실명 및 주민등록번호 인증을 먼저 해주세요.", ModalUtil.ERROR));
+		if(userID == null) {
+			session.setAttribute("modal", new ModalUtil("오류 메시지", "로그인을 먼저 해주세요.", ModalUtil.ERROR));
+			viewPage = "userLoginView.reservation";
+			isRedirect = true;
 		} else {
-			isRedirect = false;
-			viewPage = "userJoinView.jsp";
+			UserDAO userDAO = new UserDAO();
+			UserDTO user = userDAO.getUser(userID);
+			request.setAttribute("user", user);
 		}
 		return new ActionForward(isRedirect, viewPage);
 	}
