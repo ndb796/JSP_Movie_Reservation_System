@@ -66,7 +66,7 @@
               </tr>
             </tbody>
           </table>
-          	<a href="./boardWriteView.reservation" class="btn btn-primary float-right">등록</a>	
+          	<a href="./movieWriteView.reservation" class="btn btn-primary float-right">등록</a>	
     	  </main>
       </div>
     </div>

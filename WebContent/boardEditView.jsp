@@ -12,16 +12,17 @@
           </div>
           <p class="lead">게시글을 수정합니다.</p>
           <hr>
-          <form class="pt-3" style="max-width:920px;">
+          <form action="boardEditAction.reservation" method="POST" class="pt-3" style="max-width:920px;">
+            <input name="bbsID" type="hidden">
             <div class="form-group">
               <label>제목</label>
-              <input type="text" class="form-control" placeholder="제목을 입력하세요.">
+              <input name="bbsTitle" type="text" class="form-control" placeholder="제목을 입력하세요.">
             </div>
             <div class="form-group">
               <label>내용</label>
-              <textarea class="form-control" style="height:320px" placeholder="내용을 입력하세요."></textarea>
+              <textarea name="bbsContent" class="form-control" style="height:320px" placeholder="내용을 입력하세요."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">글 수정</button>
+            <button name="bbsTitle" type="submit" class="btn btn-primary">글 수정</button>
           </form>
         </main>
       </div>

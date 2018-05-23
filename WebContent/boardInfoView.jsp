@@ -22,7 +22,7 @@
               <p class="boardContent">내용 예시입니다.</p>
             </div>
             <a href="./boardEditView.reservation" class="btn btn-primary">글 수정</a>
-            <a href="#" class="btn btn-primary">글 삭제</a>
+            <a href="./boardDeleteView.reservation" class="btn btn-primary">글 삭제</a>
             <a href="./boardListView.reservation" class="btn btn-primary">글 목록</a>
           </form>
         </main>
