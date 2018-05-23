@@ -26,7 +26,16 @@
          	  <c:forEach items="${ list }" var="bbs">
               <tr>
                 <td style="text-align: center;">${ bbs.bbsID }</td>
-                <td><a href="./boardInfoView.reservation?bbsID=${ bbs.bbsID }" style="color:#000000;">${ bbs.bbsTitle }</a></td>
+                <td><a href="./boardInfoView.reservation?bbsID=${ bbs.bbsID }" style="color:#000000;">
+                <c:choose>
+                	<c:when test="${bbs.bbsAvailable == 0}">
+                		삭제된 게시글입니다.
+                	</c:when>
+                	<c:otherwise>
+                		${ bbs.bbsTitle }
+                	</c:otherwise>
+                </c:choose>
+                </a></td>
                 <td style="text-align: center;">${ bbs.userID }</td>
                 <td style="text-align: center;">${ bbs.bbsDate }</td>
               </tr>

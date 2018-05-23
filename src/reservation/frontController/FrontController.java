@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import reservation.command.bbs.BoardDeleteActionCommand;
+import reservation.command.bbs.BoardEditActionCommand;
 import reservation.command.bbs.BoardEditViewCommand;
 import reservation.command.bbs.BoardInfoViewCommand;
 import reservation.command.bbs.BoardListViewCommand;
@@ -121,6 +123,12 @@ public class FrontController extends HttpServlet {
 			forward = command.execute(request, response);
 		} else if(target.equals(ServerUtil.relativePath + "boardWriteAction.reservation")) {
 			command = new BoardWriteActionCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "boardEditAction.reservation")) {
+			command = new BoardEditActionCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "boardDeleteAction.reservation")) {
+			command = new BoardDeleteActionCommand();
 			forward = command.execute(request, response);
 		} 
 		

@@ -15,14 +15,14 @@
           <form class="pt-3" style="max-width:920px;">
             <div class="form-group">
               <label>제목</label>
-              <p class="boardTitle">제목 예시입니다.</p>
+              <p class="boardTitle">${ bbs.bbsTitle }</p>
             </div>
             <div class="form-group">
               <label>내용</label>
-              <p class="boardContent">내용 예시입니다.</p>
+              <p class="boardContent">${ bbs.bbsContent }</p>
             </div>
-            <a href="./boardEditView.reservation" class="btn btn-primary">글 수정</a>
-            <a href="./boardDeleteView.reservation" class="btn btn-primary">글 삭제</a>
+            <a href="./boardEditView.reservation?bbsID=${ bbs.bbsID }" class="btn btn-primary">글 수정</a>
+            <a href="./boardDeleteAction.reservation?bbsID=${ bbs.bbsID }" class="btn btn-primary">글 삭제</a>
             <a href="./boardListView.reservation" class="btn btn-primary">글 목록</a>
           </form>
         </main>

@@ -24,7 +24,7 @@ public class UserJoinCommand implements Command {
 		String userPhone = null;
 		String userAddress = null;
 		String userEmail = null;
-		int userType = 0;
+		int userType = 1;
 		
 		if(session.getAttribute("userNameForJoin") != null) {
 			userName = (String) session.getAttribute("userNameForJoin");

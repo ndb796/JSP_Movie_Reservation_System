@@ -106,7 +106,7 @@ public class BbsDAO {
 	
 	
 	public ArrayList<BbsDTO> getList(int pageNumber) {
-		String SQL = "SELECT * FROM RESERVATION_BBS WHERE bbsID < ? AND bbsAvailable = 1 ORDER BY bbsID DESC LIMIT 10";
+		String SQL = "SELECT * FROM RESERVATION_BBS WHERE bbsID < ? ORDER BY bbsID DESC LIMIT 10";
 		ArrayList<BbsDTO> list = new ArrayList<BbsDTO>();
 		Connection conn = null;
 		PreparedStatement pstmt = null;
