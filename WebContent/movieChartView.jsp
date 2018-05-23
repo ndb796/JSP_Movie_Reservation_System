@@ -15,6 +15,7 @@
           <table class="table table-striped" style="max-width:1080px;">
             <thead>
               <tr>
+               <!-- 테이블의 구성요소를 지정하여 게시물들이 테이블의 기준에 맞게 정렬되도록 하기 -->
                 <th class="mobile" style="width:100px; text-align:center;">장르</th>
                 <th style="text-align:center;">영화 제목</th>
                 <th class="mobile" style="width:100px; text-align:center;">러닝타임</th>
@@ -57,8 +58,7 @@
                 <td style="text-align: center;">104분</td>
                 <td style="text-align: center;">2018-05-16</td>
                 <td onclick="location.href = './reservationView.reservation';" class="btn btn-primary float-right">상영관</td>
-                <!-- 상영관 버튼 누르면 reservation으로 갈 수 있는 기능 필요 -->
-              </tr>
+             </tr>
             </tbody>
           </table>
         </main>

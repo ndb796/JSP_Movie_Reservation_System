@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ <!-- 내비게이션을 관리하는 페이지 -->
 <nav class="col-md-3 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar">
   <div class="list-group border-0 card text-center text-md-left">
     <a href="./index.jsp" class="list-group-item d-inline-block collapsed" data-parent="#sidebar">
@@ -10,6 +11,7 @@
       <img style="width: 20px;" src="./img/user.svg"><span class="d-none d-md-inline">회원 관리</span>
     </a>
     <div class="collapse" id="usermenu">
+     <!-- 로그인을 한 상태와 그렇지 않은 상태에서 사용가능한 기능이 다르도록 따로 설정 -->
 <c:choose>
 	<c:when test="${empty sessionScope.userID}">
 	  <a href="./userConfirmView.reservation" class="list-group-item" data-parent="#sidebar">회원가입</a>
@@ -24,6 +26,7 @@
 </c:choose>
     </div>
 <c:choose>
+ <!-- 관리자 페이지는 관리자가 로그인을 하였을 때에만 표시되도록 기능 -->
 	<c:when test="${sessionScope.userType eq 0}">
 	    <a href="#administration" class="list-group-item d-inline-block collapsed"
 	    data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
