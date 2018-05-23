@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import reservation.command.user.UserConfirmCommand;
+import reservation.command.user.UserJoinCommand;
 import reservation.command.user.UserJoinViewCommand;
 import reservation.command.user.UserLoginCommand;
 import reservation.command.user.UserLogoutCommand;
@@ -101,6 +102,9 @@ public class FrontController extends HttpServlet {
 			forward = command.execute(request, response);
 		} else if(target.equals(ServerUtil.relativePath + "userConfirmAction.reservation")) {
 			command = new UserConfirmCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "userJoinAction.reservation")) {
+			command = new UserJoinCommand();
 			forward = command.execute(request, response);
 		}
 		

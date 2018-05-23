@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html>
   <%@ include file="./viewFragment/header.jspf" %>
@@ -15,7 +17,6 @@
           <form action="userJoinAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
             <div class="form-group">
               <label>아이디</label>
-              ++ 
               <input name="userID" type="text" class="form-control" placeholder="아이디를 입력하세요.">
             </div>
             <div class="form-group">
@@ -25,6 +26,14 @@
             <div class="form-group">
               <label>비밀번호 확인</label>
               <input name="userPasswordConfirm" type="password" class="form-control" placeholder="비밀번호 확인을 입력하세요.">
+            </div>
+            <div class="form-group">
+              <label>성명</label>
+              <input type="text" class="form-control" value="${sessionScope.userNameForJoin}" disabled>
+            </div>
+            <div class="form-group">
+              <label>주민등록번호</label>
+              <input type="text" class="form-control" value="●●●●●●-●●●●●●●" disabled>
             </div>
             <div class="form-group">
               <label>전화번호</label>

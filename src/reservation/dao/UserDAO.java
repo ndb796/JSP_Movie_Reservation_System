@@ -112,8 +112,9 @@ public class UserDAO {
 			pstmt.setString(3, user.getUserResidentID());
 			pstmt.setString(4, user.getUserName());
 			pstmt.setString(5, user.getUserPhone());
-			pstmt.setString(6, user.getUserEmail());
-			pstmt.setInt(7, user.getUserType());
+			pstmt.setString(6, user.getUserAddress());
+			pstmt.setString(7, user.getUserEmail());
+			pstmt.setInt(8, user.getUserType());
 			return pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
