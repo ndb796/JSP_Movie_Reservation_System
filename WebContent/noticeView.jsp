@@ -43,8 +43,31 @@
                 </tr>
               </tbody>
             </table>
-          </section>
-         </main>
+               <div style="max-width:1080px;">
+            <a href="./boardWriteView.reservation" class="btn btn-primary float-right">글쓰기</a>
+          </div>
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <span class="page-link">&laquo;</span>
+            </li>
+            <li class="page-item active"><a class="page-link mobile" href="#">1</a></li>
+            <li class="page-item"><a class="page-link mobile" href="#">2</a></li>
+            <li class="page-item"><a class="page-link mobile" href="#">3</a></li>
+            <li class="page-item"><a class="page-link mobile" href="#">4</a></li>
+            <li class="page-item"><a class="page-link mobile" href="#">5</a></li>
+            <li class="page-item"><a class="page-link mobile" href="#">6</a></li>
+            <li class="page-item"><a class="page-link mobile" href="#">7</a></li>
+            <li class="page-item"><a class="page-link mobile" href="#">8</a></li>
+            <li class="page-item"><a class="page-link mobile" href="#">9</a></li>
+            <li class="page-item"><a class="page-link mobile" href="#">10</a></li>
+            <li class="page-item">
+              <span class="page-link">&raquo;</span>
+            </li>
+          </ul>
+       </div>
+    </div>
+    </section>
+    </main>
       </div>
     </div>
     <%@ include file="./viewFragment/footer.jspf" %>
