@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import reservation.command.bbs.BoardInfoViewCommand;
 import reservation.command.bbs.BoardListViewCommand;
 import reservation.command.bbs.BoardWriteViewCommand;
 import reservation.command.user.UserConfirmCommand;
@@ -56,21 +57,8 @@ public class FrontController extends HttpServlet {
 			forward = new ActionForward(false, "userFindView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "userFindResultView.reservation")) {
 			forward = new ActionForward(false, "userFindResultView.jsp");
-		}
-		
-		
-		else if(target.equals(ServerUtil.relativePath + "userDeleteView.reservation")) {
+		} else if(target.equals(ServerUtil.relativePath + "userDeleteView.reservation")) {
 			forward = new ActionForward(false, "userDeleteView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "movieManageView.reservation")) {
-			forward = new ActionForward(false, "movieManageView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "userListView.reservation")) {
-			forward = new ActionForward(false, "userListView.jsp");
-		} 
-		
-		else if(target.equals(ServerUtil.relativePath + "boardInfoView.reservation")) {
-			forward = new ActionForward(false, "boardInfoView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "boardEditView.reservation")) {
-			forward = new ActionForward(false, "boardEditView.jsp");
 		}
 		
 		else if(target.equals(ServerUtil.relativePath + "movieChartView.reservation")) {
@@ -99,7 +87,13 @@ public class FrontController extends HttpServlet {
 		} else if(target.equals(ServerUtil.relativePath + "boardWriteView.reservation")) {
 			command = new BoardWriteViewCommand();
 			forward = command.execute(request, response);
-		}
+		} else if(target.equals(ServerUtil.relativePath + "boardInfoView.reservation")) {
+			command = new BoardInfoViewCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "boardEditView.reservation")) {
+			command = new BoardEditViewCommand();
+			forward = command.execute(request, response);
+		} 
 		
 		/* 회원 - 삽입/수정/삭제 처리 (Redirect 처리) */
 		else if(target.equals(ServerUtil.relativePath + "userLoginAction.reservation")) {
@@ -124,6 +118,14 @@ public class FrontController extends HttpServlet {
 			command = new UserEditCommand();
 			forward = command.execute(request, response);
 		}
+		
+		/* 관리자 */
+		else if(target.equals(ServerUtil.relativePath + "movieManageView.reservation")) {
+			forward = new ActionForward(false, "movieManageView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "userListView.reservation")) {
+			forward = new ActionForward(false, "userListView.jsp");
+		} 
+		
 		
 		if(forward.isRedirect()) {
 			response.sendRedirect(forward.getViewPage());
