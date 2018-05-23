@@ -1,13 +1,10 @@
 package reservation.command.bbs;
 
-import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import reservation.dao.BbsDAO;
-import reservation.dto.BbsDTO;
 import reservation.frontController.ActionForward;
 import reservation.util.ModalUtil;
 import reservatoin.command.Command;

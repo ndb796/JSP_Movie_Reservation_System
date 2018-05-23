@@ -40,3 +40,21 @@ Action: userEditAction.reservation
 Method: POST
 Parameter: 비밀번호(userPassword), 비밀번호 확인(userPasswordConfirm), 전화번호(userPhone), 주소(userAddress), 이메일(userEmail)
 (아이디 서버 측에서 자동으로 넘겨줍니다.)
+
+[ 게시글 작성 ]
+
+Action: boardWriteAction.reservation
+Method: POST
+Parameter: 제목(bbsTitle), 내용(bbsContent)
+
+[ 게시글 수정 ]
+
+Action: boardEditAction.reservation
+Method: POST
+Parameter: 글 번호(bbsID), 제목(bbsTitle), 내용(bbsContent)
+
+[ 게시글 삭제 ]
+
+Action: boardDeleteAction.reservation
+Method: POST
+Parameter: 글 번호(bbsID)

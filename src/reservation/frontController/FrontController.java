@@ -121,8 +121,13 @@ public class FrontController extends HttpServlet {
 			forward = command.execute(request, response);
 		} else if(target.equals(ServerUtil.relativePath + "boardWriteView.reservation")) {
 			command = new BoardWriteViewCommand();
+<<<<<<< HEAD
 			forward = new ActionForward(false, "boardWriteView.jsp");
 		} 
+=======
+			forward = command.execute(request, response);
+		}
+>>>>>>> branch 'master' of https://github.com/ndb796/JSP_Movie_Reservation_System.git
 		
 		/* 회원 - 삽입/수정/삭제 처리 (Redirect 처리) */
 		else if(target.equals(ServerUtil.relativePath + "userLoginAction.reservation")) {

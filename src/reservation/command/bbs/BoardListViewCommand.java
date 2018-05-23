@@ -23,6 +23,7 @@ public class BoardListViewCommand implements Command {
 		ArrayList<BbsDTO> list = bbsDAO.getList(pageNumber);
 		request.setAttribute("list", list);
 		request.setAttribute("pageNumber", pageNumber);
+		request.setAttribute("nextExist", bbsDAO.nextPage(pageNumber));
 		return new ActionForward(isRedirect, viewPage);
 	}
 	
