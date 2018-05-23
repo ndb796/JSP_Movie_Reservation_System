@@ -3,6 +3,7 @@ package reservation.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import reservation.dto.UserDTO;
 import reservation.util.DatabaseUtil;
@@ -64,6 +65,40 @@ public class UserDAO {
 		return -1; // 데이터베이스 오류
 	}
 
+
+	// 아이디 정보 확인
+	public ArrayList<UserDTO> getUserList() {
+		String SQL = "SELECT * FROM RESERVATION_USER";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<UserDTO> userList = new ArrayList<UserDTO>();
+		try {
+			conn = DatabaseUtil.getConnection();
+			pstmt = conn.prepareStatement(SQL);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				userList.add(new UserDTO(
+					rs.getString(1),
+					rs.getString(2),
+					rs.getString(3),
+					rs.getString(4),
+					rs.getString(5),
+					rs.getString(6),
+					rs.getString(7),
+					rs.getInt(8)
+				));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {if(conn != null) conn.close();} catch (Exception e) {e.printStackTrace();}
+			try {if(pstmt != null) pstmt.close();} catch (Exception e) {e.printStackTrace();}
+			try {if(rs != null) rs.close();} catch (Exception e) {e.printStackTrace();}
+		}
+		return userList; // 데이터베이스 오류
+	}	
+	
 	// 아이디 정보 확인
 	public UserDTO getUser(String userID) {
 		String SQL = "SELECT * FROM RESERVATION_USER WHERE userID = ?";
