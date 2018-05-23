@@ -26,7 +26,6 @@
 </c:choose>
     </div>
 <c:choose>
- <!-- 관리자 페이지는 관리자가 로그인을 하였을 때에만 표시되도록 기능 -->
 	<c:when test="${sessionScope.userType eq 0}">
 	    <a href="#administration" class="list-group-item d-inline-block collapsed"
 	    data-parent="#sidebar" data-toggle="collapse" aria-expanded="false">
