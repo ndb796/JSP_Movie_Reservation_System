@@ -12,26 +12,22 @@
           </div>
           <p class="lead">상영중인 영화의 정보를 수정합니다.</p>
           <hr>
-          <form class="pt-3" style="max-width:920px;">
+          <form action="movieEditAction" methos="POST" class="pt-3" style="max-width:920px;">
             <div class="form-group">
               <label>제목</label>
-              <input type="text" class="form-control" placeholder="제목을 입력하세요.">
+              <input name="movieTitle" type="text" class="form-control" placeholder="제목을 입력하세요.">
             </div>
             <div class="form-group">
               <label>장르</label>
-              <input type="text" class="form-control" placeholder="장르를 입력하세요.">
-            </div>
-            <div class="form-group">
-              <label>개봉일자</label>
-              <input type="text" class="form-control" placeholder="개봉일자를 입력하세요.">
+              <input name="movieGenre" type="text" class="form-control" placeholder="장르를 입력하세요.">
             </div>
             <div class="form-group">
               <label>러닝타임</label>
-              <input type="text" class="form-control" placeholder="러닝타임을 입력하세요.">
+              <input name="movieTime" type="number" class="form-control" placeholder="러닝타임을 입력하세요.">
             </div>
             <div class="form-group">
               <label>내용</label>
-              <textarea class="form-control" style="height:320px" placeholder="내용을 입력하세요."></textarea>
+              <textarea name="movieContent" class="form-control" style="height:320px" placeholder="내용을 입력하세요."></textarea>
             </div>
             <button type="submit" class="btn btn-primary">글 수정</button>
             <section class="mt-4 mb-3 pt-4 pb-3" style="max-width:1080px;">

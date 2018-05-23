@@ -14,7 +14,7 @@
           <hr>
           <div style="position:relative; left:230px; top:50px;"><img src="./img/screen.jpeg"></div>
           <section class="mt-4 mb-3 pt-4 pb-3" style="max-width:1080px;">
-          <form class="pt-3" style="max-width:720px;">
+          <form action="payAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
          	<%
              int i=1;
              while(i < 10)

@@ -8,7 +8,7 @@
         <%@ include file="./viewFragment/navigation.jspf" %>
         <main id="main" class="col-md-9 float-left col pl-md-5 pt-3 main">
           <div class="page-header mt-3">
-          	<form action="boardDeleteAction.reservation" method="POST" class="pt-3" style="max-width:920px;">
+          	<form action="boardDeleteAction.reservation" method="GET" class="pt-3" style="max-width:920px;">
             <input name="bbsID" type="hidden">
             <h2>삭제 완료</h2>
           </div>
