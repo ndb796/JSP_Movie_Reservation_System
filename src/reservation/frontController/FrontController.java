@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import reservation.command.bbs.BoardEditViewCommand;
 import reservation.command.bbs.BoardInfoViewCommand;
 import reservation.command.bbs.BoardListViewCommand;
 import reservation.command.bbs.BoardWriteViewCommand;
