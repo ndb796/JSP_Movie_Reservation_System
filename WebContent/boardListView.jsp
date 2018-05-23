@@ -25,10 +25,10 @@
             <tbody>
          	  <c:forEach items="${ list }" var="bbs">
               <tr>
-                <td style="text-align: center;"><c:out value="${ bbs.bbsID }"/></td>
-                <td><a href="./boardInfoView.reservation?bbsID=<c:out value="${ bbs.bbsTitle }"/>" style="color:#000000;">인피니티 워 보고 왔어요~</a></td>
-                <td style="text-align: center;"><c:out value="${ bbs.userID }"/></td>
-                <td style="text-align: center;"><c:out value="${ bbs.bbsDate }"/></td>
+                <td style="text-align: center;">${ bbs.bbsID }</td>
+                <td><a href="./boardInfoView.reservation?bbsID=${ bbs.bbsID }" style="color:#000000;">${ bbs.bbsTitle }</a></td>
+                <td style="text-align: center;">${ bbs.userID }</td>
+                <td style="text-align: center;">${ bbs.bbsDate }</td>
               </tr>
               </c:forEach>
             </tbody>
@@ -39,10 +39,10 @@
           <ul class="pagination">
 			<c:choose>
 				<c:when test="${pageNumber != 1}">
-					<a href="boardListView.jsp?pageNumber=${ pageNumber - 1 }" class="btn btn-success btn-arrow-left">이전</a>
+					<a href="boardListView.reservation?pageNumber=${ pageNumber - 1 }" class="btn btn-success btn-arrow-left">이전</a>
 				</c:when>
 				<c:when test="${nextExist == true}">
-					<a href="boardListView.jsp?pageNumber=${ pageNumber + 1 }" class="btn btn-success btn-arrow-right">다음</a>
+					<a href="boardListView.reservation?pageNumber=${ pageNumber + 1 }" class="btn btn-success btn-arrow-right">다음</a>
 				</c:when>
 			</c:choose>
           </ul>

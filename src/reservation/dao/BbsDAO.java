@@ -34,7 +34,7 @@ public class BbsDAO {
 	}
 	
 	public int getNext() {
-		String SQL = "SELECT bbsID FROM BBS ORDER BY bbsID DESC";
+		String SQL = "SELECT bbsID FROM RESERVATION_BBS ORDER BY bbsID DESC";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -57,7 +57,7 @@ public class BbsDAO {
 	}
 	
 	public int write(String bbsTitle, String userID, String bbsContent) {
-		String SQL = "SELECT bbsID FROM BBS ORDER BY bbsID DESC";
+		String SQL = "INSERT INTO RESERVATION_BBS VALUES (?, ?, ?, ?, ?, ?)";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -82,7 +82,7 @@ public class BbsDAO {
 	}	
 	
 	public boolean nextPage(int pageNumber) {
-		String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbsAvailable = 1;";
+		String SQL = "SELECT * FROM RESERVATION_BBS WHERE bbsID < ? AND bbsAvailable = 1;";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -106,7 +106,7 @@ public class BbsDAO {
 	
 	
 	public ArrayList<BbsDTO> getList(int pageNumber) {
-		String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbsAvailable = 1 ORDER BY bbsID DESC LIMIT 10";
+		String SQL = "SELECT * FROM RESERVATION_BBS WHERE bbsID < ? AND bbsAvailable = 1 ORDER BY bbsID DESC LIMIT 10";
 		ArrayList<BbsDTO> list = new ArrayList<BbsDTO>();
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -137,7 +137,7 @@ public class BbsDAO {
 	}
 	
 	public BbsDTO getBbs(int bbsID) {
-		String SQL = "SELECT * FROM BBS WHERE bbsID = ?";
+		String SQL = "SELECT * FROM RESERVATION_BBS WHERE bbsID = ?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -167,7 +167,7 @@ public class BbsDAO {
 	}
 	
 	public int update(int bbsID, String bbsTitle, String bbsContent) {
-		String SQL = "UPDATE BBS SET bbsTitle = ?, bbsContent = ? WHERE bbsID = ?";
+		String SQL = "UPDATE RESERVATION_BBS SET bbsTitle = ?, bbsContent = ? WHERE bbsID = ?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;		
@@ -189,7 +189,7 @@ public class BbsDAO {
 	}
 	
 	public int delete(int bbsID) {
-		String SQL = "UPDATE BBS SET bbsAvailable = 0 WHERE bbsID = ?";
+		String SQL = "UPDATE RESERVATION_BBS SET bbsAvailable = 0 WHERE bbsID = ?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
