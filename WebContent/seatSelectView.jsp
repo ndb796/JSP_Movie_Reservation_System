@@ -12,34 +12,33 @@
           </div>
           <p class="lead">예매 인원과 좌석을 선택해주세요.</p>
           <hr>
-          <div class="form-group">
-              <label>인원</label>
-              <select class="form-control">
-                <option selected>1인</option>
-                <option>2인</option>
-                <option>3인</option>
-                <option>4인</option>
-                <option>5인</option>
-              </select>
-          </div>
+          <div style="position:relative; left:230px; top:50px;"><img src="./img/screen.jpeg"></div>
           <section class="mt-4 mb-3 pt-4 pb-3" style="max-width:1080px;">
           <form class="pt-3" style="max-width:720px;">
          	<%
-             int i = 1;
-             while(i < 133)
+             int i=1;
+             while(i < 10)
              {
             	 %>
-            	 <button type="submit" class="btn btn-primary"><% i++; %></button>
+            	 <button type="submit" class="btn btn-primary">00<%= i++ %></button>
              <%
              }
       		 %>
-        	<section class="mt-4 mb-3 pt-4 pb-3" style="max-width:1080px;">
-            <p class="lead"></p>
+      	 	<%
+             while(i < 100)
+             {
+            	 %> 
+            	 <button type="submit" class="btn btn-primary">0<%= i++ %></button>
+             <%
+             }
+      		 %>
+      		 <section class="mt-4 mb-3 pt-4 pb-3" style="max-width:1080px;">
+            <p class="lead"><% %></p>
             <%
              while(i < 265)
              {
             	 %> 
-            	 <button type="submit" class="btn btn-primary"><% i++; %></button>
+            	 <button type="submit" class="btn btn-primary"><%= i++ %></button>
              <%
              }
       		 %>
