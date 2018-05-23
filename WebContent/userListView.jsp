@@ -15,18 +15,22 @@
           <table class="table table-striped" style="max-width:1080px;">
             <thead>
               <tr>
-                <th class="mobile" style="width:100px; text-align:center;">회원 아이디</th>
+                <th class="mobile" style="width:140px; text-align:center;">회원 아이디</th>
                 <th style="text-align:center;">회원 이름</th>
                 <th class="mobile" style="width:100px; text-align:center;">탈퇴</th>
               </tr>
             </thead>
             <tbody>
 	            <c:forEach items="${ userList }" var="user">
-	              <tr>
-	                <td style="text-align: center;">${ user.userID }</td>
-	                <td style="text-align: center;">${ user.userName }</td>
-	                <td onclick="location.href = './userManageDeleteActionView.reservation?${ user.userID }';" class="btn btn-primary btn-block">탈퇴</td>
-	              </tr>
+	              <c:choose>
+	              	<c:when test="${user.userType eq 1}">
+		              <tr>
+		                <td style="text-align: center;">${ user.userID }</td>
+		                <td style="text-align: center;">${ user.userName }</td>
+		                <td onclick="location.href = './userManageDeleteAction.reservation?userID=${ user.userID }';" class="btn btn-primary btn-block">탈퇴</td>
+		              </tr>
+					</c:when>
+	              </c:choose>
 	            </c:forEach>
              </tbody>
           </table>

@@ -56,5 +56,31 @@ Parameter: 글 번호(bbsID), 제목(bbsTitle), 내용(bbsContent)
 [ 게시글 삭제 ]
 
 Action: boardDeleteAction.reservation
-Method: POST
+Method: GET
 Parameter: 글 번호(bbsID)
+
+[ 영화 등록 ]
+
+Action: movieAddAction.reservation
+Method: POST
+Parameter: 영화 번호(movieID), 영화 제목(movieTitle), 영화 내용(movieContent), 영화 장르(movieGenre), 영화 러닝타임(movieTime)
+※ 영화 시간은 type을 number로 설정해서 숫자만 입력합니다.
+
+[ 영화 삭제 ]
+
+Action: movieDeleteAction.reservation
+Method: GET
+Parameter: 영화 번호(movieID)
+
+[ 영화 수정 ]
+
+Action: movieEditAction.reservation
+Method: POST
+Parameter: 영화 번호(movieID), 영화 제목(movieTitle), 영화 내용(movieContent), 영화 장르(movieGenre), 영화 러닝타임(movieTime)
+※ 영화 시간은 type을 number로 설정해서 숫자만 입력합니다.
+
+[ 좌석 등록 ]
+
+Action: payAction.reservation
+Method: POST
+Parameter: 영화 번호(movieID), 좌석 번호(seatID) 배열

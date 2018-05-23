@@ -22,8 +22,10 @@ import reservation.command.user.UserEditCommand;
 import reservation.command.user.UserEditViewCommand;
 import reservation.command.user.UserJoinCommand;
 import reservation.command.user.UserJoinViewCommand;
+import reservation.command.user.UserListViewCommand;
 import reservation.command.user.UserLoginCommand;
 import reservation.command.user.UserLogoutCommand;
+import reservation.command.user.UserManageDeleteCommand;
 import reservation.command.user.UserPasswordFindCommand;
 import reservation.util.ServerUtil;
 import reservatoin.command.Command;
@@ -144,8 +146,18 @@ public class FrontController extends HttpServlet {
 		/* °ü¸®ÀÚ */
 		else if(target.equals(ServerUtil.relativePath + "movieManageView.reservation")) {
 			forward = new ActionForward(false, "movieManageView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "movieWriteView.reservation")) {
+			forward = new ActionForward(false, "movieWrite.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "movieDeleteView.reservation")) {
+			forward = new ActionForward(false, "movieDelete.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "movieEditView.reservation")) {
+			forward = new ActionForward(false, "movieDelete.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "userListView.reservation")) {
-			forward = new ActionForward(false, "userListView.jsp");
+			command = new UserListViewCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "userManageDeleteAction.reservation")) {
+			command = new UserManageDeleteCommand();
+			forward = command.execute(request, response);
 		} 
 		
 		
