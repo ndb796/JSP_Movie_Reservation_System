@@ -4,15 +4,15 @@ USE RESERVATION; # 데이터베이스에 접속하기
 
 DROP TABLE IF EXIST RESERVATION_USER;
 CREATE TABLE RESERVATION_USER (
-	userID VARCHAR(30) NOT NULL,
-	userPassword VARCHAR(64),
-	userResidentID VARCHAR(30),
-	userName VARCHAR(20),
-	userPhone VARCHAR(20),
-	userAddress VARCHAR(200),
-	userEmail VARCHAR(50),
-	userType INT, # (0: 관리자, 1: 일반 사용자)
-	PRIMARY KEY (userID)
+   userID VARCHAR(30) NOT NULL,
+   userPassword VARCHAR(64),
+   userResidentID VARCHAR(30),
+   userName VARCHAR(20),
+   userPhone VARCHAR(20),
+   userAddress VARCHAR(200),
+   userEmail VARCHAR(50),
+   userType INT, # (0: 관리자, 1: 일반 사용자)
+   PRIMARY KEY (userID)
 ) ENGINE = InnoDB;
 
 INSERT INTO RESERVATION_USER VALUES("관리자", "123123", "9612221000000", "이름", "01000000000", "경기도 안양시 안양동 안양마을 101동 101호", "ndb796@naver.com", 0);
