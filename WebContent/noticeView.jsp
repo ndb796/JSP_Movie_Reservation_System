@@ -20,6 +20,7 @@
                   <th style="text-align:center;">제목</th>
                   <th class="mobile" style="width:80px; text-align:center;">작성자</th>
                   <th class="mobile" style="width:120px; text-align:center;">날짜</th>
+                  <th class="mobile" style="width:120px; text-align:center;">수정/삭제</th>
                 </tr>
               </thead>
               <tbody>
@@ -28,18 +29,24 @@
                   <td>신규 운영진을 모집합니다.</td>
                   <td style="text-align: center;">운영자</td>
                   <td style="text-align: center;">2018-01-05</td>
+                  <td onclick="location.href = './noticeEditView.reservation';" class="btn btn-primary">수정</td>
+                <td onclick="location.href = './noticeDeleteView.reservation';" class="btn btn-primary">삭제</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">2</td>
                   <td>커뮤니티 웹 사이트에 오신 것을 환영합니다.</td>
                   <td style="text-align: center;">운영자</td>
                   <td style="text-align: center;">2018-01-04</td>
+                  <td onclick="location.href = './noticeEditView.reservation';" class="btn btn-primary">수정</td>
+                <td onclick="location.href = './noticeDeleteView.reservation';" class="btn btn-primary">삭제</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">1</td>
                   <td>커뮤니티 웹 사이트가 개설되었습니다.</td>
                   <td style="text-align: center;">운영자</td>
                   <td style="text-align: center;">2018-01-03</td>
+                  <td onclick="location.href = './noticeEditView.reservation';" class="btn btn-primary">수정</td>
+                <td onclick="location.href = './noticeDeleteView.reservation';" class="btn btn-primary">삭제</td>
                 </tr>
               </tbody>
             </table>

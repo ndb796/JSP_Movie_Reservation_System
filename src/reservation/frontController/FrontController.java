@@ -77,13 +77,36 @@ public class FrontController extends HttpServlet {
 			forward = new ActionForward(false, "movieChartView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "payView.reservation")) {
 			forward = new ActionForward(false, "payView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "payResultView.reservation")) {
+			forward = new ActionForward(false, "payResultView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "reservationView.reservation")) {
 			forward = new ActionForward(false, "reservationView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "qnaView.reservation")) {
 			forward = new ActionForward(false, "qnaView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "seatSelectView.reservation")) {
 			forward = new ActionForward(false, "seatSelectView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "movieManageView.reservation")) {
+			forward = new ActionForward(false, "movieManageView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "movieEditView.reservation")) {
+			forward = new ActionForward(false, "movieEditView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "movieDeleteView.reservation")) {
+			forward = new ActionForward(false, "movieDeleteView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "movieWriteView.reservation")) {
+			forward = new ActionForward(false, "movieWriteView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "noticeView.reservation")) {
+			forward = new ActionForward(false, "noticeView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "noticeEditView.reservation")) {
+			forward = new ActionForward(false, "noticeEditView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "noticeDeleteView.reservation")) {
+			forward = new ActionForward(false, "noticeDeleteView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "noticeWriteView.reservation")) {
+			forward = new ActionForward(false, "noticeWriteView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "userListView.reservation")) {
+			forward = new ActionForward(false, "userListView.jsp");
+		} else if(target.equals(ServerUtil.relativePath + "userDeleteResultView.reservation")) {
+			forward = new ActionForward(false, "userDeleteResultView.jsp");
 		}
+		
 		
 				
 		/* 회원 - 데이터 조회 처리(Forward 처리) */
@@ -99,7 +122,7 @@ public class FrontController extends HttpServlet {
 		} else if(target.equals(ServerUtil.relativePath + "boardWriteView.reservation")) {
 			command = new BoardWriteViewCommand();
 			forward = new ActionForward(false, "boardWriteView.jsp");
-		}
+		} 
 		
 		/* 회원 - 삽입/수정/삭제 처리 (Redirect 처리) */
 		else if(target.equals(ServerUtil.relativePath + "userLoginAction.reservation")) {

@@ -32,7 +32,7 @@
                 <option>12개월(무이자)</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary">결제하기</button>
+            <a href="./payResultView.reservation" class="btn btn-primary float-right">결제하기</a>
           </form>
         </main>
       </div>

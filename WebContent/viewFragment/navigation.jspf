@@ -32,7 +32,7 @@
 	    <div class="collapse" id="administration">
 		  <a href="./movieManageView.reservation" class="list-group-item" data-parent="#sidebar">상영 영화 관리</a>
 	      <a href="./noticeView.reservation" class="list-group-item" data-parent="#sidebar">공지사항</a>
-	      <a href="./userListView.reservation" class="list-group-item" data-parent="#sidebar">회원 목록</a>
+	      <a href="./userListView.reservation" class="list-group-item" data-parent="#sidebar">회원 관리</a>
 	    </div>
 	</c:when>
 </c:choose>    

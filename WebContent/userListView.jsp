@@ -8,58 +8,35 @@
         <%@ include file="./viewFragment/navigation.jspf" %>
         <main id="main" class="col-md-9 float-left col pl-md-5 pt-3 main">
           <div class="page-header mt-3">
-            <h2>회원 목록</h2>
+            <h2>회원 관리</h2>
           </div>
           <p class="lead">가입한 회원들을 관리할 수 있습니다.</p>
           <hr>
           <table class="table table-striped" style="max-width:1080px;">
             <thead>
               <tr>
-                <th class="mobile" style="width:100px; text-align:center;">장르</th>
-                <th style="text-align:center;">영화 제목</th>
-                <th class="mobile" style="width:100px; text-align:center;">러닝타임</th>
-                <th class="mobile" style="width:120px; text-align:center;">개봉일자</th>
-                <th class="mobile" style="width:70px; text-align:center;">상영관</th>
+                <th class="mobile" style="width:100px; text-align:center;">회원 이름</th>
+                <th style="text-align:center;">회원 아이디</th>
+                <th class="mobile" style="width:100px; text-align:center;">탈퇴</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style="text-align: center;">액션/모험</td>
-                <td><a href="./boardView.jsp" style="color:#000000;">어벤져스:인피니티 워</a></td>
-                <td style="text-align: center;">149분</td>
-                <td style="text-align: center;">2018-04-25</td>
-                <td onclick="location.href = './reservationView.reservation';" class="btn btn-primary float-right">상영관</td>
+                <td style="text-align: center;">나동빈</td>
+                <td style="text-align: center;">ndb796</a></td>
+                <td onclick="location.href = './userDeleteResultView.reservation';" class="btn btn-primary btn-block">탈퇴</td>
               </tr>
               <tr>
-                <td style="text-align: center;">미스터리</td>
-                <td><a href="./boardView.jsp" style="color:#000000;">버닝</a></td>
-                <td style="text-align: center;">148분</td>
-                <td style="text-align: center;">2018-05-17</td>
-                <td onclick="location.href = './reservationView.reservation';" class="btn btn-primary float-right">상영관</td>
+                <td style="text-align: center;">백승관</td>
+                <td style="text-align: center;">bsg1405</a></td>
+     			<td onclick="location.href = './userDeleteResultView.reservation';" class="btn btn-primary btn-block">탈퇴</td>
               </tr>
               <tr>
-                <td style="text-align: center;">액션/모험</td>
-                <td><a href="./boardView.jsp" style="color:#000000;">데드풀2</a></td>
-                <td style="text-align: center;">117분</td>
-                <td style="text-align: center;">2018-05-16</td>
-                <td onclick="location.href = './reservationView.reservation';" class="btn btn-primary float-right">상영관</td>
+                <td style="text-align: center;">정회진</td>
+                <td style="text-align: center;">sea211</a></td>
+                <td onclick="location.href = './userDeleteResultView.reservation';" class="btn btn-primary btn-block">탈퇴</td>
               </tr>
-              <tr>
-                <td style="text-align: center;">드라마</td>
-                <td><a href="./boardView.jsp" style="color:#000000;">레슬러</a></td>
-                <td style="text-align: center;">110분</td>
-                <td style="text-align: center;">2018-05-09</td>
-                <td onclick="location.href = './reservationView.reservation';" class="btn btn-primary float-right">상영관</td>
-              </tr>
-              <tr>
-                <td style="text-align: center;">로맨스</td>
-                <td><a href="./boardView.jsp" style="color:#000000;">안녕, 나의 소녀</a></td>
-                <td style="text-align: center;">104분</td>
-                <td style="text-align: center;">2018-05-16</td>
-                <td onclick="location.href = './reservationView.reservation';" class="btn btn-primary float-right">상영관</td>
-                <!-- 상영관 버튼 누르면 reservation으로 갈 수 있는 기능 필요 -->
-              </tr>
-            </tbody>
+             </tbody>
           </table>
         </main>
       </div>
