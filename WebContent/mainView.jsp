@@ -42,9 +42,9 @@
           </div>
            <!-- 영화 예고편을 동영상 형태로 볼 수 있게 미디어 태그 이용 -->
           <p class="lead mt-4 mb-3 pt-4 pb-3">개봉작 예고편</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/xUDhdCsLkjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xUDhdCsLkjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           <p class="lead mt-4 mb-3 pt-4 pb-3">개봉 예정작 예고편</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/MoMd7ae98hk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MoMd7ae98hk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           <section class="mt-4 mb-3 pt-4 pb-3" style="max-width:1080px;">
             <p class="lead">공지사항</p>
             <hr>

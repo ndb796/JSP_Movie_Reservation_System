@@ -16,6 +16,7 @@ import reservation.command.bbs.BoardInfoViewCommand;
 import reservation.command.bbs.BoardListViewCommand;
 import reservation.command.bbs.BoardWriteActionCommand;
 import reservation.command.bbs.BoardWriteViewCommand;
+import reservation.command.movie.MovieWriteActionCommand;
 import reservation.command.user.UserConfirmCommand;
 import reservation.command.user.UserDeleteCommand;
 import reservation.command.user.UserEditCommand;
@@ -157,6 +158,9 @@ public class FrontController extends HttpServlet {
 			forward = command.execute(request, response);
 		} else if(target.equals(ServerUtil.relativePath + "userManageDeleteAction.reservation")) {
 			command = new UserManageDeleteCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "movieWriteAction.reservation")) {
+			command = new MovieWriteActionCommand();
 			forward = command.execute(request, response);
 		} 
 		

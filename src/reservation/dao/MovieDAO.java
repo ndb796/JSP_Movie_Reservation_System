@@ -57,30 +57,6 @@ public class MovieDAO {
 		return -1; // 데이터베이스 오류
 	}	
 	
-	public boolean nextPage(int pageNumber) {
-		String SQL = "SELECT * FROM RESERVATION_MOVIE WHERE movieID < ? AND movieAvailable = 1;";
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		try {
-			conn = DatabaseUtil.getConnection();
-			pstmt = conn.prepareStatement(SQL);
-			pstmt.setInt(1, getNext() - (pageNumber) * 10);
-			rs = pstmt.executeQuery();
-			if (rs.next()) {
-				return true;
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			try {if(conn != null) conn.close();} catch (Exception e) {e.printStackTrace();}
-			try {if(pstmt != null) pstmt.close();} catch (Exception e) {e.printStackTrace();}
-			try {if(rs != null) rs.close();} catch (Exception e) {e.printStackTrace();}
-		}
-		return false; // 데이터베이스 오류
-	}
-	
-	
 	public ArrayList<MovieDTO> getList() {
 		String SQL = "SELECT * FROM RESERVATION_MOVIE ORDER BY movieID";
 		ArrayList<MovieDTO> list = new ArrayList<MovieDTO>();
