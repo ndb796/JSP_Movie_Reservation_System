@@ -63,7 +63,7 @@ Parameter: 글 번호(bbsID)
 
 Action: movieWriteAction.reservation
 Method: POST
-Parameter: 영화 번호(movieID), 영화 제목(movieTitle), 영화 내용(movieContent), 영화 장르(movieGenre), 영화 러닝타임(movieTime)
+Parameter: 영화 제목(movieTitle), 영화 내용(movieContent), 영화 장르(movieGenre), 영화 러닝타임(movieTime)
 ※ 영화 시간은 type을 number로 설정해서 숫자만 입력합니다.
 
 [ 영화 삭제 ]

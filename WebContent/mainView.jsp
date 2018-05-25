@@ -62,21 +62,21 @@
                 <tr>
                  <!-- 글의 순서에 따라 번호를 붙이는 게시물 형식 만들기 -->
                   <td style="text-align: center;">3</td>
-                  <td>신규 운영진을 모집합니다.</td>
-                  <td style="text-align: center;">운영자</td>
-                  <td style="text-align: center;">2018-01-05</td>
+                  <td>신규 영화 시사회 참여자를 모집합니다.</td>
+                  <td style"text-align: center;">운영자</td>
+                  <td style="text-align: center;">2018-05-05</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">2</td>
-                  <td>커뮤니티 웹 사이트에 오신 것을 환영합니다.</td>
+                  <td>영화 예매 웹 사이트에 오신 것을 환영합니다.</td>
                   <td style="text-align: center;">운영자</td>
-                  <td style="text-align: center;">2018-01-04</td>
+                  <td style="text-align: center;">2018-05-04</td>
                 </tr>
                 <tr>
                   <td style="text-align: center;">1</td>
-                  <td>커뮤니티 웹 사이트가 개설되었습니다.</td>
+                  <td>영화 예매 웹 사이트가 개설되었습니다.</td>
                   <td style="text-align: center;">운영자</td>
-                  <td style="text-align: center;">2018-01-03</td>
+                  <td style="text-align: center;">2018-05-03</td>
                 </tr>
               </tbody>
             </table>

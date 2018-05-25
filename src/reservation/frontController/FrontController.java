@@ -16,7 +16,14 @@ import reservation.command.bbs.BoardInfoViewCommand;
 import reservation.command.bbs.BoardListViewCommand;
 import reservation.command.bbs.BoardWriteActionCommand;
 import reservation.command.bbs.BoardWriteViewCommand;
+import reservation.command.movie.MovieChartViewCommand;
+import reservation.command.movie.MovieDeleteActionCommand;
+import reservation.command.movie.MovieEditActionCommand;
+import reservation.command.movie.MovieEditViewCommand;
+import reservation.command.movie.MovieManageViewCommand;
 import reservation.command.movie.MovieWriteActionCommand;
+import reservation.command.seat.PayActionCommand;
+import reservation.command.seat.SeatSelectViewCommand;
 import reservation.command.user.UserConfirmCommand;
 import reservation.command.user.UserDeleteCommand;
 import reservation.command.user.UserEditCommand;
@@ -68,15 +75,8 @@ public class FrontController extends HttpServlet {
 			forward = new ActionForward(false, "userDeleteView.jsp");
 		} 
 		
-		
-		else if(target.equals(ServerUtil.relativePath + "movieChartView.reservation")) {
-			forward = new ActionForward(false, "movieChartView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "movieEditView.reservation")) {
-			forward = new ActionForward(false, "movieEditView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "movieWriteView.reservation")) {
+		else if(target.equals(ServerUtil.relativePath + "movieWriteView.reservation")) {
 			forward = new ActionForward(false, "movieWriteView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "movieDeleteView.reservation")) {
-			forward = new ActionForward(false, "movieDeleteView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "payView.reservation")) {
 			forward = new ActionForward(false, "payView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "payResultView.reservation")) {
@@ -85,9 +85,7 @@ public class FrontController extends HttpServlet {
 			forward = new ActionForward(false, "reservationView.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "qnaView.reservation")) {
 			forward = new ActionForward(false, "qnaView.jsp");
-		} else if(target.equals(ServerUtil.relativePath + "seatSelectView.reservation")) {
-			forward = new ActionForward(false, "seatSelectView.jsp");
-		} 
+		}
 		
 				
 		/* 雀盔 - 单捞磐 炼雀 贸府(Forward 贸府) */
@@ -108,6 +106,9 @@ public class FrontController extends HttpServlet {
 			forward = command.execute(request, response);
 		} else if(target.equals(ServerUtil.relativePath + "boardEditView.reservation")) {
 			command = new BoardEditViewCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "seatSelectView.reservation")) {
+			command = new SeatSelectViewCommand();
 			forward = command.execute(request, response);
 		} 
 		
@@ -146,13 +147,22 @@ public class FrontController extends HttpServlet {
 		
 		/* 包府磊 */
 		else if(target.equals(ServerUtil.relativePath + "movieManageView.reservation")) {
-			forward = new ActionForward(false, "movieManageView.jsp");
+			command = new MovieManageViewCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "movieChartView.reservation")) {
+			command = new MovieChartViewCommand();
+			forward = command.execute(request, response);
 		} else if(target.equals(ServerUtil.relativePath + "movieWriteView.reservation")) {
 			forward = new ActionForward(false, "movieWrite.jsp");
 		} else if(target.equals(ServerUtil.relativePath + "movieDeleteView.reservation")) {
-			forward = new ActionForward(false, "movieDelete.jsp");
+			command = new MovieDeleteActionCommand();
+			forward = command.execute(request, response);
 		} else if(target.equals(ServerUtil.relativePath + "movieEditView.reservation")) {
-			forward = new ActionForward(false, "movieDelete.jsp");
+			command = new MovieEditViewCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "movieEditAction.reservation")) {
+			command = new MovieEditActionCommand();
+			forward = command.execute(request, response);
 		} else if(target.equals(ServerUtil.relativePath + "userListView.reservation")) {
 			command = new UserListViewCommand();
 			forward = command.execute(request, response);
@@ -161,6 +171,9 @@ public class FrontController extends HttpServlet {
 			forward = command.execute(request, response);
 		} else if(target.equals(ServerUtil.relativePath + "movieWriteAction.reservation")) {
 			command = new MovieWriteActionCommand();
+			forward = command.execute(request, response);
+		} else if(target.equals(ServerUtil.relativePath + "payAction.reservation")) {
+			command = new PayActionCommand();
 			forward = command.execute(request, response);
 		} 
 		

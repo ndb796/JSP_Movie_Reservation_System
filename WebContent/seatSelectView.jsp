@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html>
   <%@ include file="./viewFragment/header.jspf" %>
@@ -15,35 +16,28 @@
           <div style="position:relative; left:230px; top:50px;"><img src="./img/screen.jpeg"></div>
           <section class="mt-4 mb-3 pt-4 pb-3" style="max-width:1080px;">
           <form action="payAction.reservation" method="POST" class="pt-3" style="max-width:720px;">
-         	<%
-             int i=1;
-             while(i < 10)
-             {
-            	 %>
-            	 <button type="submit" class="btn btn-primary">00<%= i++ %></button>
-             <%
-             }
-      		 %>
-      	 	<%
-             while(i < 100)
-             {
-            	 %> 
-            	 <button type="submit" class="btn btn-primary">0<%= i++ %></button>
-             <%
-             }
-      		 %>
+         	 <c:forEach items="${ list }" var="data" begin="0" end="98">
+         	 	<c:choose>
+         	 		<c:when test="${ data.third == false }">
+         	 			<button onclick="location.href='./payView.reservation?movieID=${ param.movieID }&seatID=${ data.first }'" type="button" class="btn btn-primary">${ data.second }</button>
+         	 		</c:when>
+	         	 	<c:otherwise>
+         	 			<button onclick="location.href='./payView.reservation?movieID=${ param.movieID }&seatID=${ data.first }'" type="button" class="btn btn-primary" disabled>${ data.second }</button>
+	         	 	</c:otherwise>
+         	 	</c:choose>
+         	 </c:forEach>
+         	 <br><br>
+         	 <c:forEach items="${ list }" var="data" begin="99" end="264">
+         	 	<c:choose>
+         	 		<c:when test="${ data.third == false }">
+         	 			<button onclick="location.href='./payView.reservation?movieID=${ param.movieID }&seatID=${ data.first }'" type="button" class="btn btn-primary">${ data.second }</button>
+         	 		</c:when>
+	         	 	<c:otherwise>
+         	 			<button onclick="location.href='./payView.reservation?movieID=${ param.movieID }&seatID=${ data.first }'" type="button" class="btn btn-primary" disabled>${ data.second }</button>
+	         	 	</c:otherwise>
+         	 	</c:choose>
+         	 </c:forEach>
       		 <section class="mt-4 mb-3 pt-4 pb-3" style="max-width:1080px;">
-            <p class="lead"><% %></p>
-            <%
-             while(i < 265)
-             {
-            	 %> 
-            	 <button type="submit" class="btn btn-primary"><%= i++ %></button>
-             <%
-             }
-      		 %>
-      		 <section class="mt-4 mb-3 pt-4 pb-3" style="max-width:1080px;">
-            <a href="./payView.reservation" class="btn btn-primary float-right">결제하기</a>
           </form>
         </main>
       </div>

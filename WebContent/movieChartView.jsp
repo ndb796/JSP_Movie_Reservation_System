@@ -23,36 +23,14 @@
               </tr>
             </thead>
             <tbody>
+         	  <c:forEach items="${ list }" var="movie">
               <tr>
-                <td style="text-align: center;">액션/모험</td>
-                <td><a href="./boardInfoView.jsp" style="color:#000000;">어벤져스:인피니티 워</a></td>
-                <td style="text-align: center;">149분</td>
-                <td onclick="location.href = './seatSelectView.reservation';" class="btn btn-primary float-right">상영관</td>
+                <td style="text-align: center;">${ movie.movieGenre }</td>
+                <td><a style="color:#000000;">${ movie.movieTitle }</a></td>
+                <td style="text-align: center;">${ movie.movieTime }분</td>
+                <td onclick="location.href = './seatSelectView.reservation?movieID=${ movie.movieID }';" class="btn btn-primary">상영관</td>
               </tr>
-              <tr>
-                <td style="text-align: center;">미스터리</td>
-                <td><a href="./boardInfoView.jsp" style="color:#000000;">버닝</a></td>
-                <td style="text-align: center;">148분</td>
-                <td onclick="location.href = './seatSelectView.reservation';" class="btn btn-primary float-right">상영관</td>
-              </tr>
-              <tr>
-                <td style="text-align: center;">액션/모험</td>
-                <td><a href="./boardInfoView.jsp" style="color:#000000;">데드풀2</a></td>
-                <td style="text-align: center;">117분</td>
-                <td onclick="location.href = './seatSelectView.reservation';" class="btn btn-primary float-right">상영관</td>
-              </tr>
-              <tr>
-                <td style="text-align: center;">드라마</td>
-                <td><a href="./boardInfoView.jsp" style="color:#000000;">레슬러</a></td>
-                <td style="text-align: center;">110분</td>
-                <td onclick="location.href = './seatSelectView.reservation';" class="btn btn-primary float-right">상영관</td>
-              </tr>
-              <tr>
-                <td style="text-align: center;">로맨스</td>
-                <td><a href="./boardInfoView.jsp" style="color:#000000;">안녕, 나의 소녀</a></td>
-                <td style="text-align: center;">104분</td>
-         	    <td onclick="location.href = './seatSelectView.reservation';" class="btn btn-primary float-right">상영관</td>
-             </tr>
+              </c:forEach>
             </tbody>
           </table>
         </main>
