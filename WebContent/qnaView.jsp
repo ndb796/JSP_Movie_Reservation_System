@@ -23,6 +23,7 @@
                  저희 웹 사이트의 게시판은 <strong>누구나</strong> 이용할 수 있습니다.
               </div>
             </div>
+            <br></br>
             <div class="panel-heading mt-3">
               <h4 class="panel-title">
                 <a data-toggle="collapse" href="#collapse2">▶ 고객센터의 전화번호가 궁금해요.</a>
@@ -33,9 +34,22 @@
                  고객센터의 전화번호는 <strong>02)000-0000</strong>입니다.
               </div>
             </div>
+            <br></br>
+            <div class="panel-heading mt-3">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse3">▶ 고객센터의 운영시간이 궁금해요.</a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse in">
+              <div class="panel-body">
+                 고객센터는 <strong>24시간</strong> 운영합니다. 언제든 전화주세요.
+              </div>
+            </div>
+            <br></br>
           </div>
+          <br></br>
           <div class="alert alert-warning">
-            이외의 사항은 고객센터로 전화해주시면 친절히 답변해드리겠습니다.
+            이외의 사항은 고객센터로 전화해주시면 친절히 답변해드리겠습니다. ☎ 02-0000-0000
           </div>
         </main>
       </div>

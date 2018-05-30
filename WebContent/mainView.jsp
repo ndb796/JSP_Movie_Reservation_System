@@ -14,7 +14,8 @@
           <p class="lead">이곳은 현재 상영중인 영화 티켓을 예매할 수 있는 사이트입니다.</p>
           <hr>
            <!-- 캐러셀을 이용하여 사진 슬라이드 기능 구현하기 -->
-          <div id="carousel" class="carousel slide" style="max-width:1080px;" data-ride="carousel">
+          <p class="lead mt-4 mb-3 pt-4 pb-2">현재 상영작</p>
+          <div id="carousel" class="carousel slide" style="max-width:550px;" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carousel" data-slide-to="0" class="active"></li>
               <li data-target="#carousel" data-slide-to="1"></li>
@@ -41,11 +42,14 @@
           </a>
           </div>
            <!-- 영화 예고편을 동영상 형태로 볼 수 있게 미디어 태그 이용 -->
-          <p class="lead mt-4 mb-3 pt-4 pb-3">개봉작 예고편</p>
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xUDhdCsLkjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          <p class="lead mt-4 mb-3 pt-4 pb-3">개봉 예정작 예고편</p>
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MoMd7ae98hk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          <section class="mt-4 mb-3 pt-4 pb-3" style="max-width:1080px;">
+          <br></br>
+          <p class="lead mt-4 mb-3 pt-4 pb-2">개봉작 예고편</p>
+          <iframe width="50%" height="50%" src="https://www.youtube.com/embed/xUDhdCsLkjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <br></br>
+          <p class="lead mt-4 mb-3 pt-4 pb-2">개봉 예정작 예고편</p>
+          <iframe width="50%" height="50%" src="https://www.youtube.com/embed/MoMd7ae98hk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <section class="mt-4 mb-3 pt-4 pb-4" style="max-width:1080px;">
+          <br></br>
             <p class="lead">공지사항</p>
             <hr>
              <!-- 테이블 형태의 공지사항 작성 -->

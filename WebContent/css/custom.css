@@ -38,6 +38,11 @@ body {
     z-index: 2;
 }
 
+#footer {
+	background-color: #333333;
+	color: #ffffff;
+}
+
 @media (max-width:768px) {
     /* 작은 화면에서는 왼쪽 내비게이션 너비를 정해진 크기로 설정 */
     #sidebar {
