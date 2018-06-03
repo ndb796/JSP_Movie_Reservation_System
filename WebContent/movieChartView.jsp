@@ -19,7 +19,7 @@
                 <th class="mobile" style="width:100px; text-align:center;">장르</th>
                 <th style="text-align:center;">영화 제목</th>
                 <th class="mobile" style="width:100px; text-align:center;">러닝타임</th>
-                <th class="mobile" style="width:70px; text-align:center;">상영관</th>
+                <th class="mobile" style="width:80px; text-align:center;">상영관</th>
               </tr>
             </thead>
             <tbody>

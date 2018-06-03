@@ -20,7 +20,7 @@
             </div>
             <div id="collapse1" class="panel-collapse collapse in">
               <div class="panel-body">
-                 저희 웹 사이트의 게시판은 <strong>누구나</strong> 이용할 수 있습니다.
+                                 저희 웹 사이트의 게시판은 <strong>누구나</strong> 이용할 수 있습니다.
               </div>
             </div>
             <br></br>
@@ -31,7 +31,7 @@
             </div>
             <div id="collapse2" class="panel-collapse collapse in">
               <div class="panel-body">
-                 고객센터의 전화번호는 <strong>02)000-0000</strong>입니다.
+                                 고객센터의 전화번호는 <strong>02)000-0000</strong>입니다.
               </div>
             </div>
             <br></br>
@@ -42,7 +42,7 @@
             </div>
             <div id="collapse3" class="panel-collapse collapse in">
               <div class="panel-body">
-                 고객센터는 <strong>24시간</strong> 운영합니다. 언제든 전화주세요.
+                                 고객센터는 <strong>24시간</strong> 운영합니다. 언제든 전화주세요.
               </div>
             </div>
             <br></br>
